@@ -9,6 +9,7 @@ import Root from './components/Root';
 import Home from './components/Home/Home';
 import Login from './components/Navbar/Login';
 import Register from './components/Navbar/Register';
+import AllTouristsSpot from './components/TouristsSpot/AllTouristsSpot';
 
 const router = createBrowserRouter([
   {
@@ -27,6 +28,10 @@ const router = createBrowserRouter([
         path: '/register',
         element: <Register></Register>
       },
+      {
+        path: '/alltouristspot',
+        element: <AllTouristsSpot></AllTouristsSpot>
+      },
 
     ]
   },
@@ -34,8 +39,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <HelmetProvider>
-      <RouterProvider router={router}></RouterProvider>
-    </HelmetProvider>
+
+    <RouterProvider router={router}></RouterProvider>
+
   </React.StrictMode>,
 )
