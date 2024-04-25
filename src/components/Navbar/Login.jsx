@@ -8,9 +8,9 @@ const Login = () => {
 
     // const { singInUser, googleLogin, githubLogin } = UseAuth();
     const [showPassword, setShowPassword] = useState(false);
-    const navigate = useNavigate()
-    const location = useLocation();
-    console.log('Login Location', location)
+    // const navigate = useNavigate()
+    // const location = useLocation();
+    // console.log('Login Location', location)
 
     const {
         register,
