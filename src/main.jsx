@@ -14,6 +14,7 @@ import './index.css';
 import { HelmetProvider } from 'react-helmet-async';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import AddTourisSpot from './components/TouristsSpot/AddTourisSpot';
 
 const router = createBrowserRouter([
   {
@@ -35,6 +36,10 @@ const router = createBrowserRouter([
       {
         path: '/alltouristspot',
         element: <AllTouristsSpot></AllTouristsSpot>
+      },
+      {
+        path: '/addtourisspot',
+        element: <AddTourisSpot></AddTourisSpot>
       },
 
     ]

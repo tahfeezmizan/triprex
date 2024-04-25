@@ -7,8 +7,7 @@ import UseAuth from "../../Hook/UseAuth";
 import { toast } from "react-toastify";
 
 const Login = () => {
-    const { logInUser, googleLogin } = UseAuth();
-    // const { singInUser, googleLogin, githubLogin } = UseAuth();
+    const { logInUser, googleLogin, githubLogin } = UseAuth();
     const [showPassword, setShowPassword] = useState(false);
     const navigate = useNavigate()
     // const location = useLocation();
@@ -35,17 +34,6 @@ const Login = () => {
                 toast.error(`${errorMessage}`)
             });
 
-        // singInUser(email, password)
-        //     .then(result => {
-        //         const user = result.user;
-        //         navigate(location?.state ? location.state : '/');
-        //         toast.success('Congrs! Login Sucessfull');
-        //     })
-        //     .catch(error => {
-        //         const errorText = error.message;
-        //         const errorMessage = errorText.slice(22, 40);
-        //         toast.error(`${errorMessage}`)
-        //     });
     }
 
     const togglePasswordVisibility = () => {
@@ -121,18 +109,18 @@ const Login = () => {
                         </button>
 
                         <button
-                            // onClick={() => githubLogin()
-                            //     .then(result => {
-                            //         toast.success('Congrs! Login Sucessfull');
-                            //         navigate(location?.state ? location.state : '/');
-                            //     })
-                            //     .catch((error) => {
-                            //         const errorText = error.message;
-                            //         console.log(errorText)
-                            //         const errorMessage = errorText.slice(22, 62);
-                            //         toast.error(errorMessage)
-                            //     })
-                            // }
+                            onClick={() => githubLogin()
+                                .then(result => {
+                                    toast.success('Congrs! Login Sucessfull');
+                                    navigate(location?.state ? location.state : '/');
+                                })
+                                .catch((error) => {
+                                    const errorText = error.message;
+                                    console.log(errorText)
+                                    const errorMessage = errorText.slice(22, 62);
+                                    toast.error(errorMessage)
+                                })
+                            }
                             className='btn ml-3'>GitHub
                         </button>
                     </div>
