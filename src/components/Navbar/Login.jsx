@@ -7,10 +7,10 @@ import UseAuth from "../../Hook/UseAuth";
 import { toast } from "react-toastify";
 
 const Login = () => {
-    const { logInUser } = UseAuth();
+    const { logInUser, googleLogin } = UseAuth();
     // const { singInUser, googleLogin, githubLogin } = UseAuth();
     const [showPassword, setShowPassword] = useState(false);
-    // const navigate = useNavigate()
+    const navigate = useNavigate()
     // const location = useLocation();
     // console.log('Login Location', location)
 
@@ -104,17 +104,18 @@ const Login = () => {
                     <h2 className="mb-5 -mt-6"> Login With</h2>
                     <div className=''>
                         <button
-                            // onClick={() => googleLogin()
-                            //     .then(result => {
-                            //         toast.success('Congrs! Login Sucessfull');
-                            //         navigate(location?.state ? location.state : '/');
-                            //     })
-                            //     .catch((error) => {
-                            //         const errorText = error.message;
-                            //         const errorMessage = errorText.slice(22, 40);
-                            //         toast.error(errorMessage)
-                            //     })
-                            // }
+                            onClick={() => googleLogin()
+                                .then(result => {
+                                    toast.success('Congrs! Login Sucessfull');
+                                    navigate(location?.state ? location.state : '/');
+                                })
+                                .catch((error) => {
+                                    const errorText = error.message;
+                                    console.log(errorText)
+                                    const errorMessage = errorText.slice(22, 40);
+                                    toast.error(errorMessage)
+                                })
+                            }
                             className='btn mr-3'>Google
 
                         </button>
