@@ -12,6 +12,8 @@ import Root from './components/Root';
 import AllTouristsSpot from './components/TouristsSpot/AllTouristsSpot';
 import './index.css';
 import { HelmetProvider } from 'react-helmet-async';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const router = createBrowserRouter([
   {
@@ -45,6 +47,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       <HelmetProvider>
         <RouterProvider router={router}></RouterProvider>
       </HelmetProvider>
+      <ToastContainer />
     </AuthProvider>
   </React.StrictMode>,
 )

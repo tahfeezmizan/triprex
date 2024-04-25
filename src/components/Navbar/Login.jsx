@@ -3,9 +3,11 @@ import { Helmet } from "react-helmet";
 import { useForm } from "react-hook-form";
 import { FaRegEye, FaRegEyeSlash } from "react-icons/fa";
 import { NavLink, useLocation, useNavigate } from "react-router-dom";
+import UseAuth from "../../Hook/UseAuth";
+import { toast } from "react-toastify";
 
 const Login = () => {
-
+    const { logInUser } = UseAuth();
     // const { singInUser, googleLogin, githubLogin } = UseAuth();
     const [showPassword, setShowPassword] = useState(false);
     // const navigate = useNavigate()
@@ -20,6 +22,18 @@ const Login = () => {
 
     const onSubmit = (data) => {
         const { email, password } = data;
+
+        logInUser(email, password)
+            .then(result => {
+                const user = result.user;
+                navigate(location?.state ? location.state : '/');
+                toast.success('Congrs! Login Sucessfull');
+            })
+            .catch(error => {
+                const errorText = error.message;
+                const errorMessage = errorText.slice(22, 40);
+                toast.error(`${errorMessage}`)
+            });
 
         // singInUser(email, password)
         //     .then(result => {

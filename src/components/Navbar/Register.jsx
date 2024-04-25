@@ -3,10 +3,12 @@ import { Helmet } from "react-helmet";
 import { useForm } from "react-hook-form";
 import { FaRegEye, FaRegEyeSlash } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
+import UseAuth from "../../Hook/UseAuth";
+import { toast } from "react-toastify";
 
 const Register = () => {
+    const { createUser } = UseAuth();
 
-    // const { createUser, userProfileUpdate, logOut } = UseAuth();
     const [showPassword, setShowPassword] = useState(false);
     // const navigate = useNavigate();
 
@@ -20,18 +22,19 @@ const Register = () => {
         const { email, password, name, photoUrl } = data;
         console.log(data)
 
-        // createUser(email, password)
-        //     .then(result => {
-        //         const registerData = result.user;
-        //         userProfileUpdate(name, photoUrl)
-        //         logOut()
-        //         toast.success('User Register Sucessfully')
-        //         navigate('/login')
-        //     })
-        //     .catch(error => {
-        //         const errorMessage = error.message;
-        //         toast.error(`${errorMessage}`)
-        //     });
+        createUser(email, password)
+            .then(result => {
+                const registerData = result.user;
+                console.log(registerData)
+                // userProfileUpdate(name, photoUrl)
+                // logOut()
+                toast.success('User Register Sucessfully')
+                // navigate('/login')
+            })
+            .catch(error => {
+                const errorMessage = error.message;
+                toast.error(`${errorMessage}`)
+            });
     };
 
     const togglePasswordVisibility = () => {
