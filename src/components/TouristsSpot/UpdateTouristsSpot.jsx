@@ -1,15 +1,8 @@
-import React from 'react';
-import { useForm } from 'react-hook-form';
-import UseAuth from '../../Hook/UseAuth';
-import Swal from 'sweetalert2';
 
-const AddTourisSpot = () => {
-    const { user } = UseAuth();
+const UpdateTouristsSpot = () => {
 
     const handleAddTouris = e => {
         e.preventDefault();
-        const email = user.email;
-        const username = user.displayName;
         const form = e.target;
         const touristsspotname = form.touristsspotname.value;
         const image = form.image.value;
@@ -21,33 +14,25 @@ const AddTourisSpot = () => {
         const traveltime = form.traveltime.value;
         const description = form.description.value;
 
-        const touristsSpot = { email, username, touristsspotname, image, location, averagecost, countryname, seasonality, totavisitorsperyear, traveltime, description }
-        console.log(touristsSpot)
+        const UpdatetouristsSpot = { touristsspotname, image, location, averagecost, countryname, seasonality, totavisitorsperyear, traveltime, description }
+        console.log(UpdatetouristsSpot)
 
-        fetch('http://localhost:5000/touristsspot', {
-            method: "POST",
-            headers: { "content-type": "application/json" },
-            body: JSON.stringify(touristsSpot)
-        })
-            .then(res => res.json())
-            .then(data => {
-                console.log(data)
-                if (data.insertedId) {
-                    Swal.fire({
-                        title: 'success',
-                        text: 'Add New Touris Spot',
-                        icon: 'success',
-                        confirmButtonText: 'Ok'
-                    })
-                }
-            })
+        // fetch('http://localhost:5000/touristsspot', {
+        //     method: "POST",
+        //     headers: { "content-type": "application/json" },
+        //     body: JSON.stringify(touristsSpot)
+        // })
+        //     .then(res => res.json())
+        //     .then(data => {
+        //         console.log(data)
+        //     })
     }
 
     return (
         <div className="bg-[#f8f8f8] py-10">
             <div className="w-full md:w-8/12 mx-auto">
                 <div className="max-w-screen-md mx-auto border rounded-lg bg-white p-12">
-                    <h1 className="text-5xl text-center font-bold pb-5">Add Tourists Spot</h1>
+                    <h1 className="text-5xl text-center font-bold pb-5">Update Tourists Spot</h1>
 
                     <form onSubmit={handleAddTouris}>
                         <div className="flex gap-8">
@@ -158,4 +143,4 @@ const AddTourisSpot = () => {
     );
 };
 
-export default AddTourisSpot;
+export default UpdateTouristsSpot;

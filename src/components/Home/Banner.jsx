@@ -47,7 +47,7 @@ const Banner = () => {
                             <h4 data-aos="fade-down" data-aos-duration="1400" className=''>WANA FIND YOUR DREAM HOME !</h4>
                             <h1 data-aos="fade-down" data-aos-duration="1500" className='text-2xl md:text-5xl xl:text-8xl px-1 md:px-10 pb-5 md:pb-10 font-bold uppercase'>Take you to your dream destination</h1>
                             <p></p>
-                            <button data-aos="fade-up" data-aos-duration="1600" className='btn border-none text-white uppercase bg-[#007AFF] px-10 text-xl'>Get Start</button>
+                            <button data-aos="fade-up" data-aos-duration="1600" className='btn border-none text-white uppercase bg-primaryColor px-10 text-xl'>Get Start</button>
                         </div>
                     </div>
                 </SwiperSlide>
@@ -63,7 +63,7 @@ const Banner = () => {
                         <div className="w-8/12 text-center mx-auto ">
                             <h4 data-aos="fade-down" data-aos-duration="1400" className=''>WANA FIND YOUR DREAM HOME !</h4>
                             <h1 data-aos="fade-down" data-aos-duration="1500" className='text-2xl md:text-5xl xl:text-8xl px-1 md:px-10 pb-5 md:pb-10 font-bold uppercase'>luxury villas designed for life</h1>
-                            <button data-aos="fade-up" data-aos-duration="1600" className='btn border-none text-white uppercase bg-[#007AFF] px-10 text-xl'>Get Start</button>
+                            <button data-aos="fade-up" data-aos-duration="1600" className='btn border-none text-white uppercase bg-primaryColor px-10 text-xl'>Get Start</button>
                         </div>
                     </div>
                 </SwiperSlide>
@@ -79,7 +79,7 @@ const Banner = () => {
                         <div className="w-8/12 text-center mx-auto ">
                             <h4 data-aos="fade-down" data-aos-duration="1400" className=''>WANA FIND YOUR DREAM HOME !</h4>
                             <h1 data-aos="fade-down" data-aos-duration="1500" className='text-2xl md:text-5xl xl:text-8xl px-1 md:px-10 pb-5 md:pb-10 font-bold uppercase'>CLASSIC SPACIOUS RESIDENCES</h1>
-                            <button data-aos="fade-up" data-aos-duration="1600" className='btn border-none text-white uppercase bg-[#007AFF] px-10 text-xl'>Get Start</button>
+                            <button data-aos="fade-up" data-aos-duration="1600" className='btn border-none text-white uppercase bg-primaryColor px-10 text-xl'>Get Start</button>
                         </div>
                     </div>
                 </SwiperSlide>

@@ -124,7 +124,7 @@ const Register = () => {
                         {errors.password && <span className="text-xs text-red-500">{errors?.password?.message}</span>}
                     </div>
                     <div className="form-control my-6">
-                        <button type="submit" className="btn bg-[#007AFF] hover:bg-[#007bffde] text-white text-xl font-bold">Create An Account</button>
+                        <button type="submit" className="btn bg-primaryColor hover:bg-[#007bffde] text-white text-xl font-bold">Create An Account</button>
                     </div>
                 </form>
                 <h3 className="text-black text-center -mt-7">Have an account? <NavLink to="/login" className="text-[#007AFF] font-bold ">Sing In</NavLink></h3>

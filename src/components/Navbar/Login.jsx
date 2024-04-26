@@ -85,7 +85,7 @@ const Login = () => {
                         {errors.password && <span className="text-xs text-red-500">Password is required</span>}
                     </div>
                     <div className="form-control my-6">
-                        <button className="btn  bg-[#007AFF] hover:bg-[#007bffde] text-white text-xl font-bold">Login</button>
+                        <button className="btn  bg-[#3B71FE] hover:bg-[#007bffde] text-white text-xl font-bold">Login</button>
                     </div>
                 </form>
                 <div className="text-center">

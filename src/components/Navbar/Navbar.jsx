@@ -12,7 +12,8 @@ const Navbar = () => {
         <li><NavLink to='/alltouristspot'>All Tourists Spot</NavLink></li>
         {/* <li><NavLink to='/About'>About</NavLink></li> */}
         {user?.email ?
-            <li><NavLink to='/addtourisspot'>Add Tourists Spot</NavLink></li> : ''
+            <> <li><NavLink to='/addtourisspot'>Add Tourists Spot</NavLink></li> <li><NavLink to='/updatetourisspot'>Update Tourists Spot</NavLink></li></> : ''
+
         }
         {/* <li><NavLink to='/blog'>Blog</NavLink></li> */}
         {/* <li><NavLink to='/contact'>Contact</NavLink></li> */}
@@ -60,7 +61,7 @@ const Navbar = () => {
                         </div>
                         :
                         <div className="flex gap-4">
-                            <NavLink className="btn btn-outline font-semibold text-base" to="/login">Login</NavLink>
+                            <NavLink className="btn btn-outline bg-primaryColor font-semibold text-base" to="/login">Login</NavLink>
                         </div>
                     }
                 </div>
