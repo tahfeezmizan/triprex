@@ -17,15 +17,7 @@ const UpdateTouristsSpot = () => {
         const UpdatetouristsSpot = { touristsspotname, image, location, averagecost, countryname, seasonality, totavisitorsperyear, traveltime, description }
         console.log(UpdatetouristsSpot)
 
-        // fetch('http://localhost:5000/touristsspot', {
-        //     method: "POST",
-        //     headers: { "content-type": "application/json" },
-        //     body: JSON.stringify(touristsSpot)
-        // })
-        //     .then(res => res.json())
-        //     .then(data => {
-        //         console.log(data)
-        //     })
+        
     }
 
     return (

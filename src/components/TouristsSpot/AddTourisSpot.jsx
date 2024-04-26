@@ -10,6 +10,7 @@ const AddTourisSpot = () => {
         e.preventDefault();
         const email = user.email;
         const username = user.displayName;
+
         const form = e.target;
         const touristsspotname = form.touristsspotname.value;
         const image = form.image.value;
@@ -31,7 +32,7 @@ const AddTourisSpot = () => {
         })
             .then(res => res.json())
             .then(data => {
-                console.log(data)
+                // console.log(data)
                 if (data.insertedId) {
                     Swal.fire({
                         title: 'success',
@@ -39,6 +40,7 @@ const AddTourisSpot = () => {
                         icon: 'success',
                         confirmButtonText: 'Ok'
                     })
+                    form.reset('')
                 }
             })
     }

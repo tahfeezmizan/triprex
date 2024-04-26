@@ -42,7 +42,7 @@ const Register = () => {
     };
 
     return (
-        <div className="hero min-h-screen bg-base-200" >
+        <div className="hero min-h-screen bg-[#f8f8f8]" >
             <Helmet>
                 <title>Register - Trip Rex</title>
             </Helmet>

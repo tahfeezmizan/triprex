@@ -16,6 +16,8 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import AddTourisSpot from './components/TouristsSpot/AddTourisSpot';
 import UpdateTouristsSpot from './components/TouristsSpot/UpdateTouristsSpot';
+import MyListedItem from './components/MyListedItem/MyListedItem';
+import MyCardBanner from './components/MyListedItem/MyCardBanner';
 
 const router = createBrowserRouter([
   {
@@ -37,7 +39,6 @@ const router = createBrowserRouter([
       {
         path: '/alltouristspot',
         element: <AllTouristsSpot></AllTouristsSpot>,
-        loader: () => fetch('http://localhost:5000/touristsspot')
       },
       {
         path: '/addtourisspot',
@@ -47,6 +48,10 @@ const router = createBrowserRouter([
         path: '/updatetourisspot',
         element: <UpdateTouristsSpot></UpdateTouristsSpot>
       },
+      {
+        path: '/mylist',
+        element: <><MyCardBanner></MyCardBanner><MyListedItem></MyListedItem></>
+      }
 
     ]
   },

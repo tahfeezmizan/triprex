@@ -12,7 +12,10 @@ const Navbar = () => {
         <li><NavLink to='/alltouristspot'>All Tourists Spot</NavLink></li>
         {/* <li><NavLink to='/About'>About</NavLink></li> */}
         {user?.email ?
-            <> <li><NavLink to='/addtourisspot'>Add Tourists Spot</NavLink></li> <li><NavLink to='/updatetourisspot'>Update Tourists Spot</NavLink></li></> : ''
+            <> <li><NavLink to='/addtourisspot'>Add Tourists Spot</NavLink></li>
+                <li><NavLink to='/updatetourisspot'>Update Tourists Spot</NavLink></li>
+                <li><NavLink to='/mylist'>My List</NavLink></li>
+            </> : ''
 
         }
         {/* <li><NavLink to='/blog'>Blog</NavLink></li> */}
