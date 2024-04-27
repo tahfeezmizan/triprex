@@ -2,6 +2,8 @@ import React from 'react';
 import { useForm } from 'react-hook-form';
 import UseAuth from '../../Hook/UseAuth';
 import Swal from 'sweetalert2';
+import { Helmet } from 'react-helmet';
+import { BASE_URL } from '../../constant';
 
 const AddTourisSpot = () => {
     const { user } = UseAuth();
@@ -25,7 +27,7 @@ const AddTourisSpot = () => {
         const touristsSpot = { email, username, touristsspotname, image, location, averagecost, countryname, seasonality, totavisitorsperyear, traveltime, description }
         console.log(touristsSpot)
 
-        fetch('http://localhost:5000/touristsspot', {
+        fetch(`${BASE_URL}/touristsspot`, {
             method: "POST",
             headers: { "content-type": "application/json" },
             body: JSON.stringify(touristsSpot)
@@ -47,6 +49,9 @@ const AddTourisSpot = () => {
 
     return (
         <div className="bg-[#f8f8f8] py-10">
+            <Helmet>
+                <title>Add New Touris Spot - Trip Rex React Template</title>
+            </Helmet>
             <div className="w-full md:w-8/12 mx-auto">
                 <div className="max-w-screen-md mx-auto border rounded-lg bg-white p-12">
                     <h1 className="text-5xl text-center font-bold pb-5">Add Tourists Spot</h1>

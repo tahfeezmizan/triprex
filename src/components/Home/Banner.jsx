@@ -18,7 +18,7 @@ const Banner = () => {
     return (
         <div>
             <Helmet>
-                <title>Home Park - React Template</title>
+                <title>Home  - Trip Rex React Template</title>
             </Helmet>
             <Swiper
                 spaceBetween={30}

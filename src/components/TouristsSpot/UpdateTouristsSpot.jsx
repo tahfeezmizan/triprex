@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet";
 
 const UpdateTouristsSpot = () => {
 
@@ -22,6 +23,9 @@ const UpdateTouristsSpot = () => {
 
     return (
         <div className="bg-[#f8f8f8] py-10">
+            <Helmet>
+                <title>Update Tourists Card - Trip Rex React Template</title>
+            </Helmet>
             <div className="w-full md:w-8/12 mx-auto">
                 <div className="max-w-screen-md mx-auto border rounded-lg bg-white p-12">
                     <h1 className="text-5xl text-center font-bold pb-5">Update Tourists Spot</h1>

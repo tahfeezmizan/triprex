@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet';
 import bannerImg from '../../assets/mylist-banner.png'
 
 
@@ -9,6 +10,9 @@ const MyCardBanner = () => {
             backgroundSize: 'cover',
             backgroundRepeat: 'no-repeat'
         }}>
+            <Helmet>
+                <title>My Touris Spot List - Trip Rex React Template</title>
+            </Helmet>
             <div className="w-full lg:w-5/6 xl:w-8/12 mx-auto px-2 lg:px-0 py-10 md:py-12 lg:py-20">
                 <h1 className="font-bold text-white" >My Touris Spot</h1>
             </div>

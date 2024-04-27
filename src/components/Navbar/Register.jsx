@@ -44,7 +44,7 @@ const Register = () => {
     return (
         <div className="hero min-h-screen bg-[#f8f8f8]" >
             <Helmet>
-                <title>Register - Trip Rex</title>
+                <title>Register Page - Trip Rex React Template</title>
             </Helmet>
             <div className="card shrink-0 w-full max-w-lg p-10 shadow-2xl bg-base-100">
                 <h1 className="text-5xl text-center font-bold pt-10">Register Now!</h1>

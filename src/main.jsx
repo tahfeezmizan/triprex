@@ -18,6 +18,8 @@ import AddTourisSpot from './components/TouristsSpot/AddTourisSpot';
 import UpdateTouristsSpot from './components/TouristsSpot/UpdateTouristsSpot';
 import MyListedItem from './components/MyListedItem/MyListedItem';
 import MyCardBanner from './components/MyListedItem/MyCardBanner';
+import TouristCardDetails from './components/TouristsSpot/TouristCardDetails';
+import Hero2 from './components/Home/Hero2';
 
 const router = createBrowserRouter([
   {
@@ -51,6 +53,14 @@ const router = createBrowserRouter([
       {
         path: '/mylist',
         element: <><MyCardBanner></MyCardBanner><MyListedItem></MyListedItem></>
+      },
+      {
+        path: '/touristSpot/:id',
+        element: <TouristCardDetails></TouristCardDetails>,
+      },
+      {
+        path: '/hero',
+        element: <Hero2></Hero2>
       }
 
     ]
