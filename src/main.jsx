@@ -7,6 +7,7 @@ import {
 } from "react-router-dom";
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import ErrorPage from './components/ErrorPage/ErrorPage';
 import Home from './components/Home/Home';
 import MyCardBanner from './components/MyListedItem/MyCardBanner';
 import MyListedItem from './components/MyListedItem/MyListedItem';
@@ -20,8 +21,7 @@ import AllTouristsSpot from './components/TouristsSpot/AllTouristsSpot';
 import TouristCardDetails from './components/TouristsSpot/TouristCardDetails';
 import UpdateTouristsSpot from './components/TouristsSpot/UpdateTouristsSpot';
 import './index.css';
-import ErrorPage from './components/ErrorPage/ErrorPage';
-import RrotectedRoute from './components/PrivateRoute/RrotectedRoute';
+import TouristBanner from './components/TouristsSpot/TouristBanner';
 
 const router = createBrowserRouter([
   {
@@ -43,7 +43,7 @@ const router = createBrowserRouter([
       },
       {
         path: '/alltouristspot',
-        element: <AllTouristsSpot></AllTouristsSpot>,
+        element: <><TouristBanner></TouristBanner><AllTouristsSpot></AllTouristsSpot></>,
       },
       {
         path: '/addtourisspot',
@@ -59,7 +59,7 @@ const router = createBrowserRouter([
       },
       {
         path: '/updatespot/:id',
-        element: <RrotectedRoute><UpdateTouristsSpot></UpdateTouristsSpot></RrotectedRoute>
+        element: <UpdateTouristsSpot></UpdateTouristsSpot>
       }
 
     ]

@@ -10,8 +10,8 @@ const Login = () => {
     const { logInUser, googleLogin, githubLogin } = UseAuth();
     const [showPassword, setShowPassword] = useState(false);
     const navigate = useNavigate()
-    // const location = useLocation();
-    // console.log('Login Location', location)
+    const location = useLocation();
+    console.log('Login Location', location)
 
     const {
         register,
@@ -84,8 +84,9 @@ const Login = () => {
                         </div>
                         {errors.password && <span className="text-xs text-red-500">Password is required</span>}
                     </div>
-                    <div className="form-control my-6">
-                        <button className="btn  bg-[#d01818] hover:bg-[#0d1637] text-white text-xl font-bold">Login</button>
+                    <div className="form-control pt-5">
+                        <button className="btn w-full bg-[#d01818] hover:bg-[#0d1637] text-white text-xl font-bold">Login</button>
+
                     </div>
                 </form>
                 <div className="text-center">
@@ -126,7 +127,7 @@ const Login = () => {
                         </button>
                     </div>
                 </div>
-                <h3 className="text-[#0d1637] text-center pt-3">Don't have an account? <NavLink to="/register" className="text-[#d01818] hover:text-[#0d1637] font-bold">Create Account</NavLink></h3>
+                <h3 className="text-[#0d1637] text-center pt-3">Need an account? <NavLink to="/register" className="text-blue-600 hover:text-[#d01818] font-bold">Create Account</NavLink></h3>
             </div>
         </div>
     );

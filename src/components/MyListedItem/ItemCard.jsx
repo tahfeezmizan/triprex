@@ -1,8 +1,45 @@
 import { CiClock2, CiLocationOn } from "react-icons/ci";
 import { Link } from "react-router-dom";
+import Swal from "sweetalert2";
+import { BASE_URL } from "../../constant";
 
-const ItemCard = ({ card }) => {
+const ItemCard = ({ card, item, setItem }) => {
     const { _id, averagecost, countryname, image, location, seasonality, touristsspotname, traveltime } = card;
+
+    const handleDelete = _id => {
+
+        Swal.fire({
+            title: "Are you sure?",
+            text: "You won't be able to revert this!",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Yes, delete it!"
+        }).then((result) => {
+            if (result.isConfirmed) {
+                fetch(`${BASE_URL}/deleteSpot/${_id}`, {
+                    method: 'DELETE'
+                })
+                    .then(res => res.json())
+                    .then(data => {
+                        // console.log(data);
+                        if (data.deletedCount > 0) {
+                            Swal.fire({
+                                title: "Deleted!",
+                                text: "Your Tourist Spot has been deleted.",
+                                icon: "success"
+                            });
+                            const remaining = item.filter(spot => spot._id !== _id);
+                            setItem(remaining)
+                        }
+                    })
+
+            }
+        });
+    }
+
+
     return (
         <div className="bg-white border rounded-xl flex justify-around flex-col hover:shadow-lg duration-500 overflow-hidden">
             <div className="h-64 overflow-hidden">
@@ -21,8 +58,9 @@ const ItemCard = ({ card }) => {
             </div>
             <div className="p-5 pt-4 pb-7 flex gap-4">
                 <Link to={`/updatespot/${_id}`} className="btn btn-outline text-white flex-1 text-xl bg-[#d01818] hover:bg-[#0d1637]">Update</Link>
-                
-                <Link to={`/cards`} className="btn btn-outline text-white flex-1 text-xl bg-[#d01818] hover:bg-[#0d1637]">Delete</Link>
+                <Link className="btn btn-outline text-white flex-1 text-xl bg-[#d01818] hover:bg-[#0d1637]">
+                    <button onClick={() => handleDelete(_id)}>Delete</button>
+                </Link>
             </div>
         </div>
     );

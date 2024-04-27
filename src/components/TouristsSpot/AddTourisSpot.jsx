@@ -137,10 +137,10 @@ const AddTourisSpot = () => {
                                 <label className="text-lg font-medium block">Travel Time</label>
                                 <select name='traveltime' className="select select-bordered w-full">
                                     <option disabled selected>Travel Time</option>
-                                    <option>2 Days</option>
-                                    <option>3 Days</option>
-                                    <option>7 Days</option>
-                                    <option>15 Days</option>
+                                    <option>2 Days - 1 NIGHTS</option>
+                                    <option>3 Days - 2  NIGHTS</option>
+                                    <option>7 Days - 6 NIGHTS</option>
+                                    <option>15 Days - 14 NIGHTS</option>
                                     <option>One Months</option>
                                 </select>
 

@@ -39,19 +39,21 @@ const AuthProvider = ({ children }) => {
     }
 
     useEffect(() => {
-       const unsubscribe= onAuthStateChanged(auth, (currentUser) => {
+        const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
             if (currentUser) {
                 setUser(currentUser)
+                setLoading(false)
                 console.log(currentUser)
             }
         });
-        return () =>  {
+        return () => {
             unsubscribe()
         }
     }, [])
 
     const authValue = {
         user,
+        loading,
         createUser,
         logInUser,
         googleLogin,
