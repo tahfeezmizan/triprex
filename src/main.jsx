@@ -21,6 +21,7 @@ import TouristCardDetails from './components/TouristsSpot/TouristCardDetails';
 import UpdateTouristsSpot from './components/TouristsSpot/UpdateTouristsSpot';
 import './index.css';
 import ErrorPage from './components/ErrorPage/ErrorPage';
+import RrotectedRoute from './components/PrivateRoute/RrotectedRoute';
 
 const router = createBrowserRouter([
   {
@@ -49,10 +50,6 @@ const router = createBrowserRouter([
         element: <AddTourisSpot></AddTourisSpot>
       },
       {
-        path: '/updatetourisspot',
-        element: <UpdateTouristsSpot></UpdateTouristsSpot>
-      },
-      {
         path: '/mylist',
         element: <><MyCardBanner></MyCardBanner><MyListedItem></MyListedItem></>
       },
@@ -60,6 +57,10 @@ const router = createBrowserRouter([
         path: '/touristSpot/:id',
         element: <RotectedRoute><TouristCardDetails></TouristCardDetails></RotectedRoute>
       },
+      {
+        path: '/updatespot/:id',
+        element: <RrotectedRoute><UpdateTouristsSpot></UpdateTouristsSpot></RrotectedRoute>
+      }
 
     ]
   },

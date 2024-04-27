@@ -1,6 +1,10 @@
+import { useEffect, useState } from "react";
 import { Helmet } from "react-helmet";
+import { useParams } from "react-router-dom";
+import { BASE_URL } from "../../constant";
 
 const UpdateTouristsSpot = () => {
+    const [updateData, setUpdateData] = useState([]);
 
     const handleAddTouris = e => {
         e.preventDefault();
@@ -17,9 +21,19 @@ const UpdateTouristsSpot = () => {
 
         const UpdatetouristsSpot = { touristsspotname, image, location, averagecost, countryname, seasonality, totavisitorsperyear, traveltime, description }
         console.log(UpdatetouristsSpot)
-
-        
     }
+
+    const {id} = useParams();
+    console.log(id)
+
+    useEffect(() => {
+        fetch(`${BASE_URL}/updatespot/${id}`)
+            .then(res => res.json())
+            .then(data => {
+                console.log(data)
+                // setCard(data)
+            })
+    }, [])
 
     return (
         <div className="bg-[#f8f8f8] py-10">

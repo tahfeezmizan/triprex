@@ -1,16 +1,17 @@
 import { useEffect, useState } from "react";
 import UseAuth from "../../Hook/UseAuth";
 import ItemCard from "./ItemCard";
+import { BASE_URL } from "../../constant";
 
 const MyListedItem = () => {
     const { user } = UseAuth();
     const [item, setItem] = useState([]);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/mylist/${user?.email}`)
+        fetch(`${BASE_URL}/mylist/${user?.email}`)
             .then(res => res.json())
             .then(data => {
-                console.log(data)
+                // console.log(data)
                 setItem(data)
             })
     }, [])

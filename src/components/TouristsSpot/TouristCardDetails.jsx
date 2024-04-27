@@ -17,7 +17,7 @@ const TouristCardDetails = () => {
                 console.log(data)
                 setCard(data)
             })
-    }, [id])
+    }, [id]);
 
     // const { _id, averagecost, countryname, description, image, location, seasonality, totavisitorsperyear, touristsspotname, traveltime }
 
@@ -62,10 +62,6 @@ const TouristCardDetails = () => {
 
                     </div>
                     <div className="border p-6 rounded-md">
-                        
-
-                       
-
                         <div className="">
                             <h2 data-aos="fade-right" data-aos-duration="2300" className='font-bold text-lg mb-2'>Description</h2>
                             <p data-aos="fade-right" data-aos-duration="2500" className="text-gray-400">{card.description}</p>

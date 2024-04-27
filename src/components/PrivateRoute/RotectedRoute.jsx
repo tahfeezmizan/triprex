@@ -8,7 +8,7 @@ const RotectedRoute = ({children}) => {
     if (user) {
         return children
     }
-    return <Navigate to="login"></Navigate>
+    return <Navigate to="/login"></Navigate>
 };
 
 export default RotectedRoute;

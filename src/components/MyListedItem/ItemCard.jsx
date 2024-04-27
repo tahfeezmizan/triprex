@@ -2,7 +2,7 @@ import { CiClock2, CiLocationOn } from "react-icons/ci";
 import { Link } from "react-router-dom";
 
 const ItemCard = ({ card }) => {
-    const { averagecost, countryname, description, email, image, location, seasonality, totavisitorsperyear, touristsspotname, username, traveltime } = card;
+    const { _id, averagecost, countryname, image, location, seasonality, touristsspotname, traveltime } = card;
     return (
         <div className="bg-white border rounded-xl flex justify-around flex-col hover:shadow-lg duration-500 overflow-hidden">
             <div className="h-64 overflow-hidden">
@@ -20,7 +20,8 @@ const ItemCard = ({ card }) => {
                 </div>
             </div>
             <div className="p-5 pt-4 pb-7 flex gap-4">
-                <Link to={`/cards`} className="btn btn-outline text-white flex-1 text-xl bg-[#d01818] hover:bg-[#0d1637]">Update</Link>
+                <Link to={`/updatespot/${_id}`} className="btn btn-outline text-white flex-1 text-xl bg-[#d01818] hover:bg-[#0d1637]">Update</Link>
+                
                 <Link to={`/cards`} className="btn btn-outline text-white flex-1 text-xl bg-[#d01818] hover:bg-[#0d1637]">Delete</Link>
             </div>
         </div>
