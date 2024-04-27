@@ -3,6 +3,7 @@ import { CiLogout } from 'react-icons/ci';
 import { TbUserEdit } from 'react-icons/tb';
 import { NavLink } from 'react-router-dom';
 import UseAuth from '../../Hook/UseAuth';
+import './Navbar.css'
 
 const Navbar = () => {
     const { logOut, user } = UseAuth();

@@ -85,11 +85,12 @@ const Login = () => {
                         {errors.password && <span className="text-xs text-red-500">Password is required</span>}
                     </div>
                     <div className="form-control my-6">
-                        <button className="btn  bg-[#3B71FE] hover:bg-[#007bffde] text-white text-xl font-bold">Login</button>
+                        <button className="btn  bg-[#d01818] hover:bg-[#0d1637] text-white text-xl font-bold">Login</button>
                     </div>
                 </form>
                 <div className="text-center">
-                    <h2 className="mb-5 -mt-6"> Login With</h2>
+                    {/* <h2 className="mb-5 -mt-6"> Login With</h2> */}
+                    <div className="divider">Login With</div>
                     <div className=''>
                         <button
                             onClick={() => googleLogin()
@@ -125,7 +126,7 @@ const Login = () => {
                         </button>
                     </div>
                 </div>
-                <h3 className="text-black text-center pt-3">Don't have an account? <NavLink to="/register" className="text-[#007AFF] font-bold">Create Account</NavLink></h3>
+                <h3 className="text-[#0d1637] text-center pt-3">Don't have an account? <NavLink to="/register" className="text-[#d01818] hover:text-[#0d1637] font-bold">Create Account</NavLink></h3>
             </div>
         </div>
     );

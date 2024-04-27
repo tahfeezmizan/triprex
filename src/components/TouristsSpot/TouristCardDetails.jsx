@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import { BASE_URL } from "../../constant";
 import { BsArrowsMove, BsHouseCheck } from "react-icons/bs";
 import { Helmet } from "react-helmet";
-import { CiLocationOn } from "react-icons/ci";
+import { CiClock2, CiLocationOn } from "react-icons/ci";
 import { FaRegHeart } from "react-icons/fa";
 
 const TouristCardDetails = () => {
@@ -22,29 +22,29 @@ const TouristCardDetails = () => {
     // const { _id, averagecost, countryname, description, image, location, seasonality, totavisitorsperyear, touristsspotname, traveltime }
 
     return (
-        <div className='w-full lg:w-9/12 xl:w-8/12 mx-auto px-3 py-28 md:px-0'>
+        <div className='w-full lg:w-9/12 xl:w-8/12 mx-auto px-3 py-10 md:px-0'>
             <Helmet>
-                <title>Properties Details - Home Park React Template</title>
+                <title>Tourists Spot Details - Trip Rex React Template</title>
             </Helmet>
 
             <div className="">
-                <h2 data-aos="fade-right" data-aos-duration="1700" className="text-2xl md:text-4xl font-bold mb-3">{card.touristsspotname}
-                    
-                </h2>
-                <p data-aos="fade-right" data-aos-duration="1800" className=" flex items-center gap-2 text-gray-400">Categories: <span className="text-black font-semibold">
-                    {/* {card.segment_name} */}
-                </span></p>
+                <h2 className="text-2xl md:text-4xl font-bold mb-3">{card.touristsspotname}</h2>
 
-                <div className="flex justify-between items-end -mt-2 md:-mt-9 pb-10">
-                    <p data-aos="fade-right" data-aos-duration="1900" className=" flex items-center gap-2 text-gray-600"><span className="text-blue-600"><CiLocationOn /></span>
-                        {card.location}
-                    </p>
-                    <div data-aos="fade-left" data-aos-duration="2000" className="text-blue-600">
-                        <h4 className='text-end font-medium'>From</h4>
-                        <p className="text-4xl font-bold">
-                            {/* {card.price} */}
-                        </p>
+                <div className="flex justify-between items-end pb-6">
+                    <div className="py-3 pb-4 ">
+                        <div className="flex pb-2">
+                            <p><span className="bg-gray-100 rounded p-1 text-[#4d4d4d] mr-3">{card.seasonality}</span></p>
+                            <p className="text-gray-400 text-base"><span className="text-black">{card.countryname}</span></p>
+                        </div>
+                        <p className="flex items-center gap-1 text-[#d01818]"><span className=""><CiLocationOn /></span>{card.location}</p>
                     </div>
+
+                    <div className="">
+                        <button className='bg-gray-100 hover:text-[#d01818] p-2 rounded-full duration-200'>
+                            <FaRegHeart />
+                        </button>
+                    </div>
+
                 </div>
                 <img data-aos="fade-up" data-aos-duration="2100" src={card.image} className='w-full lg:h-96 xl:h-[600px] object-fill mb-10 rounded-xl' alt="" />
             </div>
@@ -52,33 +52,21 @@ const TouristCardDetails = () => {
             <div className="grid gap-8 grid-cols-1 md:grid-cols-2 xl:grid-cols-6">
 
                 <div className="col-span-4">
-                    <h3 data-aos="fade-right" data-aos-duration="2000" className='text-2xl mb-5 font-bold'>Property Description</h3>
+                    <div className="bg-[#F2F4F4] p-6 rounded-md mb-5 flex justify-between">
+
+                        <p className="flex items-center gap-1 text-gray-400"><span><CiClock2 /></span>Duration: <span className="uppercase text-[#0d1637]">{card.traveltime}</span></p>
+
+                        <p className="text-[#4d4d4d] text-base flex items-center gap-1">Tour Cost: <span className="uppercase text-[#0d1637]">{card.averagecost}</span></p>
+
+                        <p className="text-gray-400 text-base">Country: <span className="text-[#0d1637] uppercase">{card.countryname}</span></p>
+
+                    </div>
                     <div className="border p-6 rounded-md">
-                        <div className="flex justify-between items-end border-b pb-2 mb-6">
-                            <p data-aos="fade-right" data-aos-duration="2100" className="text-gray-600 text-base">Property ID: <span className='font-bold text-black'>OP-S
-                                {/* {card.id} */}
-                            </span></p>
-                            <button className='bg-blue-200 p-2 rounded-full hover:bg-blue-500 hover:text-white duration-200'>
-                                <FaRegHeart />
-                            </button>
-                        </div>
+                        
 
-                        <div data-aos="fade-right" data-aos-duration="2200" className="flex gap-7 flex-col md:flex-row md:items-end border-b pb-8">
-                            <p className="text-blue-500 text-base flex items-center gap-1"><BsHouseCheck />< span className='font-medium text-gray-500'>
-                                {/* {card.facilities[0]} */}
-                            </span></p>
-                            <p className="text-blue-500 text-base flex items-center gap-1"><BsHouseCheck />< span className='font-medium text-gray-500'>
-                                {/* {card.facilities[1]} */}
-                            </span></p>
-                            <p className="text-blue-500 text-base flex items-center gap-1"><BsHouseCheck />< span className='font-medium text-gray-500'>
-                                {/* {card.facilities[2]} */}
-                            </span></p>
-                            <p className="text-blue-500 text-base flex items-center gap-1"><BsArrowsMove />< span className='font-medium text-gray-500'>
-                                {/* {card.area} */}
-                                Sq ft</span></p>
-                        </div>
+                       
 
-                        <div className="mt-6">
+                        <div className="">
                             <h2 data-aos="fade-right" data-aos-duration="2300" className='font-bold text-lg mb-2'>Description</h2>
                             <p data-aos="fade-right" data-aos-duration="2500" className="text-gray-400">{card.description}</p>
                         </div>
@@ -90,7 +78,7 @@ const TouristCardDetails = () => {
                         <div className="w-full h-full overflow-hidden rounded-lg pb-5">
                             <img data-aos="fade-left" data-aos-duration="1700" className="w-full h-full object-cover transition-transform transform hover:scale-105 duration-500 ease-in-out" src={card.image} alt="" />
                         </div>
-                        <h1 data-aos="fade-left" data-aos-duration="1800" className="text-2xl font-bold mb-3">Trust Real Estate</h1>
+                        <h1 data-aos="fade-left" data-aos-duration="1800" className="text-2xl font-bold mb-3">Trip Rex Travel</h1>
 
                         <p data-aos="fade-left" data-aos-duration="1900" className="text-gray-600 text-base flex items-center gap-2 mb-1"><BsHouseCheck />< span className='text-gray-400'> homepark@lexus.com</span></p>
                         <p data-aos="fade-left" data-aos-duration="2000" className="text-gray-600 text-base flex items-center gap-2 mb-1"><BsHouseCheck />< span className='text-gray-400'> 1800 - 1234 - 5678</span></p>

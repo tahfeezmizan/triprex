@@ -156,7 +156,7 @@ const AddTourisSpot = () => {
                         </div>
 
                         <div className="form-control my-6">
-                            <button className="btn bg-[#3B71FE] hover:bg-[#007bffde] text-white text-xl font-bold">Add New Touris Spot</button>
+                            <button className="btn bg-[#d01818] hover:bg-[#0d1637] text-white text-xl font-bold">Add New Touris Spot</button>
                         </div>
                     </form>
                 </div >

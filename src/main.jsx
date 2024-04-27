@@ -1,30 +1,32 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { HelmetProvider } from 'react-helmet-async';
 import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-import Home from './components/Home/Home';
-import Login from './components/Navbar/Login';
-import Register from './components/Navbar/Register';
-import AuthProvider from './components/Provider/AuthProvider';
-import Root from './components/Root';
-import AllTouristsSpot from './components/TouristsSpot/AllTouristsSpot';
-import './index.css';
-import { HelmetProvider } from 'react-helmet-async';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import AddTourisSpot from './components/TouristsSpot/AddTourisSpot';
-import UpdateTouristsSpot from './components/TouristsSpot/UpdateTouristsSpot';
-import MyListedItem from './components/MyListedItem/MyListedItem';
+import Home from './components/Home/Home';
 import MyCardBanner from './components/MyListedItem/MyCardBanner';
+import MyListedItem from './components/MyListedItem/MyListedItem';
+import Login from './components/Navbar/Login';
+import Register from './components/Navbar/Register';
+import RotectedRoute from './components/PrivateRoute/RotectedRoute';
+import AuthProvider from './components/Provider/AuthProvider';
+import Root from './components/Root';
+import AddTourisSpot from './components/TouristsSpot/AddTourisSpot';
+import AllTouristsSpot from './components/TouristsSpot/AllTouristsSpot';
 import TouristCardDetails from './components/TouristsSpot/TouristCardDetails';
-import Hero2 from './components/Home/Hero2';
+import UpdateTouristsSpot from './components/TouristsSpot/UpdateTouristsSpot';
+import './index.css';
+import ErrorPage from './components/ErrorPage/ErrorPage';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root></Root>,
+    errorElement: <ErrorPage></ErrorPage>,
     children: [
       {
         path: '/',
@@ -56,12 +58,8 @@ const router = createBrowserRouter([
       },
       {
         path: '/touristSpot/:id',
-        element: <TouristCardDetails></TouristCardDetails>,
+        element: <RotectedRoute><TouristCardDetails></TouristCardDetails></RotectedRoute>
       },
-      {
-        path: '/hero',
-        element: <Hero2></Hero2>
-      }
 
     ]
   },

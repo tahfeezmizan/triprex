@@ -1,0 +1,18 @@
+li a {
+    font-size: 16px;
+    font-weight: 500;
+    color: #0d1637;
+    transition: 0.3 ease-in;
+}
+
+li a.active {
+    background: transparent !important;
+    color: #d01818 !important;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+li a:hover {
+    color: #d01818 !important;
+    background: transparent !important;
+}

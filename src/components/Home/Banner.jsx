@@ -18,7 +18,7 @@ const Banner = () => {
     return (
         <div>
             <Helmet>
-                <title>Home  - Trip Rex React Template</title>
+                <title>Home - Trip Rex React Template</title>
             </Helmet>
             <Swiper
                 spaceBetween={30}
@@ -36,50 +36,50 @@ const Banner = () => {
             >
                 <SwiperSlide
                     style={{
-                        backgroundImage: `linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(${slider1})`,
+                        backgroundImage: ` url(${slider1})`,
                         backgroundPosition: 'center',
                         backgroundSize: 'cover',
                         backgroundRepeat: 'no-repeat'
                     }}
                 >
-                    <div className="min-h-[500px] md:h-screen flex items-center text-white"  >
-                        <div className="w-full md:w-8/12 text-center mx-auto ">
-                            <h4 data-aos="fade-down" data-aos-duration="1400" className=''>WANA FIND YOUR DREAM HOME !</h4>
-                            <h1 data-aos="fade-down" data-aos-duration="1500" className='text-2xl md:text-5xl xl:text-8xl px-1 md:px-10 pb-5 md:pb-10 font-bold uppercase'>Uncovering Stories, One Trip At A Time</h1>
+                    <div className="min-h-[500px] md:h-screen flex items-center"  >
+                        <div className="w-full md:w-8/12 mx-auto">
+                            <h4 data-aos="fade-down" data-aos-duration="1400" className='text-[#d01818]'>WANA FIND YOUR DREAM HOME !</h4>
+                            <h1 data-aos="fade-down" data-aos-duration="1500" className='text-[#0d1637] text-2xl md:text-5xl xl:text-8xl pb-5 md:pb-10 font-bold '>Uncovering Stories, One Trip At A Time</h1>
                             <p></p>
-                            <button data-aos="fade-up" data-aos-duration="1600" className='btn border-none text-white uppercase bg-[#3B71FE] hover:bg-[#007bffde] px-10 text-xl'>Get Start</button>
+                            <button data-aos="fade-up" data-aos-duration="1600" className='btn border-none text-white  bg-[#d01818] hover:bg-[#0d1637] px-10 text-xl'>Get Start</button>
                         </div>
                     </div>
                 </SwiperSlide>
                 <SwiperSlide
                     style={{
-                        backgroundImage: `linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(${slider2})`,
+                        backgroundImage: `url(${slider2})`,
                         backgroundPosition: 'center',
                         backgroundSize: 'cover',
                         backgroundRepeat: 'no-repeat'
                     }}
                 >
                     <div className="min-h-[500px] md:h-screen flex items-center text-white">
-                        <div className="w-8/12 text-center mx-auto ">
-                            <h4 className=''>WANA FIND YOUR DREAM HOME !</h4>
-                            <h1 className='text-2xl md:text-5xl xl:text-8xl px-1 md:px-10 pb-5 md:pb-10 font-bold uppercase'>Explore World And Find The Beauty</h1>
-                            <button className='btn border-none text-white uppercase bg-[#3B71FE] hover:bg-[#007bffde] px-10 text-xl'>Get Start</button>
+                        <div className="w-8/12 mx-auto">
+                            <h4 className='text-[#d01818]'>WANA FIND YOUR DREAM HOME !</h4>
+                            <h1 className='text-[#0d1637] text-2xl md:text-5xl xl:text-8xl pb-5 md:pb-10 font-bold '>Explore World And Find The Beauty</h1>
+                            <button className='btn border-none text-white  bg-[#d01818] hover:bg-[#0d1637] px-10 text-xl'>Get Start</button>
                         </div>
                     </div>
                 </SwiperSlide>
                 <SwiperSlide
                     style={{
-                        backgroundImage: `linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url(${slider3})`,
+                        backgroundImage: `url(${slider3})`,
                         backgroundPosition: 'center',
                         backgroundSize: 'cover',
                         backgroundRepeat: 'no-repeat'
                     }}
                 >
                     <div className="min-h-[500px] md:h-screen flex items-center text-white">
-                        <div className="w-8/12 text-center mx-auto ">
-                            <h4 className=''>WANA FIND YOUR DREAM HOME !</h4>
-                            <h1 className='text-2xl md:text-5xl xl:text-8xl px-1 md:px-10 pb-5 md:pb-10 font-bold uppercase'>Explore Earth And Like The Supreme</h1>
-                            <button className='btn border-none text-white uppercase bg-[#3B71FE] hover:bg-[#007bffde] px-10 text-xl'>Get Start</button>
+                        <div className="w-8/12 mx-auto">
+                            <h4 className='text-[#d01818]'>WANA FIND YOUR DREAM HOME !</h4>
+                            <h1 className='text-[#0d1637] text-2xl md:text-5xl xl:text-8xl pb-5 md:pb-10 font-bold '>Explore Earth And Like The Supreme</h1>
+                            <button className='btn border-none text-white  bg-[#d01818] hover:bg-[#0d1637] px-10 text-xl'>Get Start</button>
                         </div>
                     </div>
                 </SwiperSlide>

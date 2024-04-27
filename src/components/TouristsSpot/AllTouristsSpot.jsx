@@ -20,9 +20,13 @@ const AllTouristsSpot = () => {
             <Helmet>
                 <title>All Touris Spot - Trip Rex React Template</title>
             </Helmet>
-            <div className="text-center mb-10">
-                <h2 className="text-5xl font-bold mb-5">Top <span className="text-[#3B71FE]">Destinations</span></h2>
-                <p className="text-[#848484] text-lg w-[500px] mx-auto">Explore our top destinations voted by more than 100,000+ customers around the world.</p>
+            <div className="mb-10 flex justify-between">
+                <div className="border-l-4 border-l-[#d01818]">
+                    <h2 className="text-5xl text-[#0d1637] font-bold pl-2">Top Destinations</h2>
+                </div>
+                <div className="">
+                    <button data-aos="fade-up" data-aos-duration="1600" className='btn border-none text-white uppercase bg-[#d01818] hover:bg-[#0d1637] hover:shadow-xl duration-500 px-10 text-xl'>Get Start</button>
+                </div>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10">
