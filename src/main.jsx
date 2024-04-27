@@ -22,6 +22,7 @@ import TouristCardDetails from './components/TouristsSpot/TouristCardDetails';
 import UpdateTouristsSpot from './components/TouristsSpot/UpdateTouristsSpot';
 import './index.css';
 import TouristBanner from './components/TouristsSpot/TouristBanner';
+import DestinationSlider from './components/Destination/DestinationSlider';
 
 const router = createBrowserRouter([
   {
@@ -60,6 +61,10 @@ const router = createBrowserRouter([
       {
         path: '/updatespot/:id',
         element: <UpdateTouristsSpot></UpdateTouristsSpot>
+      },
+      {
+        path: '/destinationSlider',
+        element: <DestinationSlider></DestinationSlider>
       }
 
     ]

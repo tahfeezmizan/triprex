@@ -2,6 +2,7 @@ import React from 'react';
 import { CiLogout } from 'react-icons/ci';
 import { TbUserEdit } from 'react-icons/tb';
 import { NavLink } from 'react-router-dom';
+import { Tooltip } from 'react-tooltip'
 import UseAuth from '../../Hook/UseAuth';
 import './Navbar.css'
 
@@ -44,9 +45,9 @@ const Navbar = () => {
                         {links}
                     </ul>
                 </div>
-                <div data-aos="fade-left" data-aos-duration="1300" className="navbar-end z-[1000]">
+                <div className="navbar-end z-[1000]">
                     {user?.email ?
-                        <div className="dropdown dropdown-end">
+                        <div className="dropdown dropdown-end" data-tooltip-id="my-tooltip" data-tooltip-content="Hello to you too!">
                             <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
                                 <div className="w-10 rounded-full">
                                     <img alt="Tailwind CSS Navbar component" src={user.photoURL} />

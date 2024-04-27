@@ -34,12 +34,12 @@ const AllTouristsSpot = () => {
             {/* <Helmet>
                 <title>All Touris Spot - Trip Rex React Template</title>
             </Helmet> */}
-            <div className="mb-10 flex justify-between">
+            <div className="mb-10 flex flex-col md:flex-row justify-between gap-6">
                 <div className="border-l-4 border-l-[#d01818]">
-                    <h2 className="text-5xl text-[#0d1637] font-bold pl-2">Top Destinations</h2>
+                    <h2 className="text-3xl md:text-5xl text-[#0d1637] font-bold pl-2">Popular Activities</h2>
                 </div>
-                <div className="">
-                    <button data-aos="fade-up" data-aos-duration="1600" className='btn border-none text-white uppercase bg-[#d01818] hover:bg-[#0d1637] hover:shadow-xl duration-500 px-10 text-xl'>Get Start</button>
+                <div className="text-end">
+                    <button className='btn border-none text-white uppercase bg-[#d01818] hover:bg-[#0d1637] hover:shadow-xl duration-500 px-10 text-xl'>Sort By</button>
                 </div>
             </div>
 

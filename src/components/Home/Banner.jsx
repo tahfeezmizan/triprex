@@ -36,16 +36,16 @@ const Banner = () => {
             >
                 <SwiperSlide
                     style={{
-                        backgroundImage: ` url(${slider1})`,
+                        backgroundImage: `linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(${slider1})`,
                         backgroundPosition: 'center',
                         backgroundSize: 'cover',
                         backgroundRepeat: 'no-repeat'
                     }}
                 >
                     <div className="min-h-[500px] md:h-screen flex items-center"  >
-                        <div className="w-full md:w-8/12 mx-auto">
-                            <h4 data-aos="fade-down" data-aos-duration="1400" className='text-[#d01818]'>WANA FIND YOUR DREAM HOME !</h4>
-                            <h1 data-aos="fade-down" data-aos-duration="1500" className='text-[#0d1637] text-2xl md:text-5xl xl:text-8xl pb-5 md:pb-10 font-bold '>Uncovering Stories, One Trip At A Time</h1>
+                        <div className="w-full md:w-8/12 mx-auto text-center">
+                            <h4 className='font-bold text-white text-base md:text-xl mb-2'>Experience the Unseen!</h4>
+                            <h1 className='text-white text-3xl md:text-6xl xl:text-8xl px-10 xl:px-28 pb-5 md:pb-10  font-bold '>Uncovering Stories, One Trip At A Time</h1>
                             <p></p>
                             <button data-aos="fade-up" data-aos-duration="1600" className='btn border-none text-white  bg-[#d01818] hover:bg-[#0d1637] px-10 text-xl'>Get Start</button>
                         </div>
@@ -53,32 +53,32 @@ const Banner = () => {
                 </SwiperSlide>
                 <SwiperSlide
                     style={{
-                        backgroundImage: `url(${slider2})`,
+                        backgroundImage: `linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(${slider2})`,
                         backgroundPosition: 'center',
                         backgroundSize: 'cover',
                         backgroundRepeat: 'no-repeat'
                     }}
                 >
                     <div className="min-h-[500px] md:h-screen flex items-center text-white">
-                        <div className="w-8/12 mx-auto">
-                            <h4 className='text-[#d01818]'>WANA FIND YOUR DREAM HOME !</h4>
-                            <h1 className='text-[#0d1637] text-2xl md:text-5xl xl:text-8xl pb-5 md:pb-10 font-bold '>Explore World And Find The Beauty</h1>
+                        <div className="w-8/12 mx-auto text-center">
+                            <h4 className='font-bold text-white text-base md:text-xl mb-2'>Discover New Horizons!</h4>
+                            <h1 className='text-white text-3xl md:text-6xl xl:text-8xl  px-10 xl:px-28 b-5 md:pb-10  font-bold '>Explore World And Find The Beauty</h1>
                             <button className='btn border-none text-white  bg-[#d01818] hover:bg-[#0d1637] px-10 text-xl'>Get Start</button>
                         </div>
                     </div>
                 </SwiperSlide>
                 <SwiperSlide
                     style={{
-                        backgroundImage: `url(${slider3})`,
+                        backgroundImage: `linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(${slider3})`,
                         backgroundPosition: 'center',
                         backgroundSize: 'cover',
                         backgroundRepeat: 'no-repeat'
                     }}
                 >
                     <div className="min-h-[500px] md:h-screen flex items-center text-white">
-                        <div className="w-8/12 mx-auto">
-                            <h4 className='text-[#d01818]'>WANA FIND YOUR DREAM HOME !</h4>
-                            <h1 className='text-[#0d1637] text-2xl md:text-5xl xl:text-8xl pb-5 md:pb-10 font-bold '>Explore Earth And Like The Supreme</h1>
+                        <div className="w-8/12 mx-auto text-center">
+                            <h4 className='font-bold text-white text-base md:text-xl mb-2'>Explore the World!</h4>
+                            <h1 className='text-white text-3xl md:text-6xl xl:text-8xl px-10 xl:px-28 pb-5 md:pb-10  font-bold '>Explore Earth And Like The Supreme</h1>
                             <button className='btn border-none text-white  bg-[#d01818] hover:bg-[#0d1637] px-10 text-xl'>Get Start</button>
                         </div>
                     </div>
