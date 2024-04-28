@@ -5,7 +5,7 @@ const ErrorPage = () => {
     return (
         <div className='w-full lg:w-11/12 xl:w-8/12 mx-auto px-4 md:px-6 lg:px-0 py-10'>
             <Helmet>
-                <title>404 Error Page - Home Park</title>
+                <title>404 Error Page - Trip Rex React Template</title>
             </Helmet>
             <div className="flex flex-col h-screen justify-center items-center">
                 <img className='max-w-prose' alt="" />

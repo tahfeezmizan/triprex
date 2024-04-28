@@ -24,6 +24,10 @@ import './index.css';
 import TouristBanner from './components/TouristsSpot/TouristBanner';
 import DestinationSlider from './components/Destination/DestinationSlider';
 import Newslatter from './components/Newslatter/Newslatter';
+import Profile from './components/Profile/Profile';
+import AboutBanner from './components/About/AboutBanner';
+import About from './components/About/About';
+import Countries from './components/Country/Countries';
 
 const router = createBrowserRouter([
   {
@@ -42,6 +46,10 @@ const router = createBrowserRouter([
       {
         path: '/register',
         element: <Register></Register>
+      },
+      {
+        path: '/profile',
+        element: <RotectedRoute><Profile></Profile></RotectedRoute>
       },
       {
         path: '/alltouristspot',
@@ -66,8 +74,15 @@ const router = createBrowserRouter([
       {
         path: '/destinationSlider',
         element: <DestinationSlider></DestinationSlider>
-      }
-
+      },
+      {
+        path: '/about',
+        element: <><AboutBanner></AboutBanner><About></About></>
+      },
+      {
+        path: '/country',
+        element: <Countries></Countries>
+      },
     ]
   },
 ]);
