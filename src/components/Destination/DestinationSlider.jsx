@@ -19,7 +19,7 @@ const DestinationSlider = () => {
             </div>
 
             <Swiper
-                slidesPerView={1} // Show only one slide at a time
+                slidesPerView={1}
                 spaceBetween={30}
                 pagination={{
                     clickable: true,
@@ -27,12 +27,11 @@ const DestinationSlider = () => {
                 modules={[Pagination]}
                 className="mySwiper"
                 breakpoints={{
-                    // Adjust slides based on screen width
                     640: {
-                        slidesPerView: 2, // Show 2 slides on medium screens (approx. 640px)
+                        slidesPerView: 2,
                     },
                     1024: {
-                        slidesPerView: 3, // Show 3 slides on large screens (approx. 1024px)
+                        slidesPerView: 3,
                     },
                 }}
             >
@@ -101,7 +100,7 @@ const DestinationSlider = () => {
                         <h1 className="text-white text-4xl font-bold pb-8 pl-8">Bali</h1>
                     </div>
                 </SwiperSlide>
-                {/* Additional slides if needed */}
+                
             </Swiper>
         </div>
     );
