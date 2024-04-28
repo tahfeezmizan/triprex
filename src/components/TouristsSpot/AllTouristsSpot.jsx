@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { BASE_URL } from "../../constant";
 import TouristSpotCard from "./TouristSpotCard";
 import { NavLink, useLocation } from "react-router-dom";
+import { IoIosArrowDown } from "react-icons/io";
 
 const AllTouristsSpot = () => {
     const [spotData, setSpotData] = useState([]);
@@ -24,7 +25,7 @@ const AllTouristsSpot = () => {
         }
         else {
             setDataLength(spotData.length)
-            
+
         }
 
     }
@@ -36,10 +37,16 @@ const AllTouristsSpot = () => {
             </Helmet> */}
             <div className="mb-10 flex flex-col md:flex-row justify-between gap-6">
                 <div className="border-l-4 border-l-[#d01818]">
-                    <h2 className="text-3xl md:text-5xl text-[#0d1637] font-bold pl-2">Popular Activities</h2>
+                    <h2 className="text-3xl md:text-5xl text-blue-900 font-bold pl-2">Popular Activities</h2>
                 </div>
                 <div className="text-end">
-                    <button className='btn border-none text-white uppercase bg-[#d01818] hover:bg-[#0d1637] hover:shadow-xl duration-500 px-10 text-xl'>Sort By</button>
+                    <div className="dropdown dropdown-end">
+                        <div tabIndex={0} role="button" className="btn m-1 text-white uppercase bg-[#d01818] hover:bg-blue-900 hover:shadow-xl duration-500 px-10 text-xl">Sort By <IoIosArrowDown /></div>
+                        <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
+                            <li><a>Ascending</a></li>
+                            <li><a>Item 2</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
 
@@ -49,7 +56,7 @@ const AllTouristsSpot = () => {
                 }
             </div>
             <div className="py-8 text-center">
-                <button onClick={() => seelAllData()} className="btn text-white text-xl px-10 bg-[#d01818] hover:bg-[#0d1637]">
+                <button onClick={() => seelAllData()} className="btn text-white text-xl px-10 bg-red-600 hover:bg-blue-900">
                     <NavLink to="/alltouristspot">See All Spot</NavLink>
                 </button>
             </div>

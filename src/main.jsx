@@ -23,6 +23,7 @@ import UpdateTouristsSpot from './components/TouristsSpot/UpdateTouristsSpot';
 import './index.css';
 import TouristBanner from './components/TouristsSpot/TouristBanner';
 import DestinationSlider from './components/Destination/DestinationSlider';
+import Newslatter from './components/Newslatter/Newslatter';
 
 const router = createBrowserRouter([
   {
@@ -44,7 +45,7 @@ const router = createBrowserRouter([
       },
       {
         path: '/alltouristspot',
-        element: <><TouristBanner></TouristBanner><AllTouristsSpot></AllTouristsSpot></>,
+        element: <><TouristBanner></TouristBanner><AllTouristsSpot></AllTouristsSpot><Newslatter></Newslatter></>,
       },
       {
         path: '/addtourisspot',
