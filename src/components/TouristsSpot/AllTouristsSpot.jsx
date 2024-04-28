@@ -70,9 +70,6 @@ const AllTouristsSpot = () => {
                             <li onClick={() => handleSortChange("asc")}>
                                 <a>Ascending Cost</a>
                             </li>
-                            <li onClick={() => handleSortChange("desc")}>
-                                <a>Descending Cost</a>
-                            </li>
                         </ul>
                     </div>
                 </div>
