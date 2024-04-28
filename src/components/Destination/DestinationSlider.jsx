@@ -10,6 +10,7 @@ import bali from '../../assets/bali.jpeg';
 import amptaIsland from '../../assets/Ampat-Islands.webp';
 import SaintMartin from '../../assets/Saint-Martin.jpg';
 import Bangkok from '../../assets/Bangkok.jpg';
+import MekongDelta from '../../assets/mekongdelta.png';
 
 const DestinationSlider = () => {
     return (
@@ -91,16 +92,16 @@ const DestinationSlider = () => {
                     <div
                         className="h-[450px] md:h-[500px] flex items-end bg-green-400 rounded-2xl"
                         style={{
-                            backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.0) 0%, rgba(0, 0, 0, 0.9) 130%), url(${SaintMartin})`,
+                            backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.0) 0%, rgba(0, 0, 0, 0.9) 130%), url(${MekongDelta})`,
                             backgroundPosition: 'center',
                             backgroundSize: 'cover',
                             backgroundRepeat: 'no-repeat',
                         }}
                     >
-                        <h1 className="text-white text-4xl font-bold pb-8 pl-8">Bali</h1>
+                        <h1 className="text-white text-4xl font-bold pb-8 pl-8">Mekong Delta</h1>
                     </div>
                 </SwiperSlide>
-                
+
             </Swiper>
         </div>
     );
