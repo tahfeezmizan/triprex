@@ -53,7 +53,7 @@ const router = createBrowserRouter([
       },
       {
         path: '/mylist',
-        element: <><MyCardBanner></MyCardBanner><MyListedItem></MyListedItem></>
+        element: <><RotectedRoute><MyCardBanner></MyCardBanner><MyListedItem></MyListedItem></RotectedRoute></>
       },
       {
         path: '/touristSpot/:id',

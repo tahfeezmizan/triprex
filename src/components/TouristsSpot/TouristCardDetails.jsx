@@ -55,11 +55,11 @@ const TouristCardDetails = () => {
                 <div className="col-span-4">
                     <div className="bg-[#F2F4F4] p-6 rounded-md mb-5 flex justify-between">
 
-                        <p className="flex items-center gap-1 text-gray-400"><span><CiClock2 /></span>Duration: <span className="uppercase text-[#0d1637]">{card.traveltime}</span></p>
+                        <p className="flex items-center gap-1 text-gray-400"><span><CiClock2 /></span>Duration: <span className="uppercase text-[#0d1637] font-semibold">{card.traveltime}</span></p>
 
-                        <p className="text-[#4d4d4d] text-base flex items-center gap-1">Tour Cost: <span className="uppercase text-[#0d1637]">{card.averagecost}</span></p>
+                        <p className="text-gray-400 text-base flex items-center gap-1">Tour Cost: <span className="uppercase text-[#0d1637] font-semibold">${card.averagecost}</span></p>
 
-                        <p className="text-gray-400 text-base">Country: <span className="text-[#0d1637] uppercase">{card.countryname}</span></p>
+                        <p className="text-gray-400 text-base">Country: <span className="text-[#0d1637] font-semibold uppercase">{card.countryname}</span></p>
 
                     </div>
                     <div className="border p-6 rounded-md">
