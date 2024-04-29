@@ -1,14 +1,11 @@
 import { useEffect, useState } from "react";
+import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 import { BASE_URL } from "../../constant";
 import TouristSpotCard from "./TouristSpotCard";
-import { NavLink, useLocation } from "react-router-dom";
-import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 
 const AllTouristsSpot = () => {
     const [spotData, setSpotData] = useState([]);
-    const [dataLength, setDataLength] = useState(6);
     const [sort, setSort] = useState("none");
-    const location = useLocation();
 
     useEffect(() => {
         fetch(`${BASE_URL}/touristsspot`)
@@ -17,15 +14,6 @@ const AllTouristsSpot = () => {
                 setSpotData(data)
             })
     }, []);
-
-    const seelAllData = () => {
-        if (location.pathname === "/") {
-            spotData(dataLength)
-        }
-        else {
-            setDataLength(spotData.length)
-        }
-    }
 
     const fetchSortedData = async (sortOrder) => {
         let url = `${BASE_URL}/touristsspot`;
@@ -77,13 +65,10 @@ const AllTouristsSpot = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10">
                 {
-                    spotData.slice(0, dataLength)?.map(touristSpot => <TouristSpotCard key={touristSpot._id} touristSpot={touristSpot}></TouristSpotCard>)
+                    spotData?.map(touristSpot => (
+                        <TouristSpotCard key={touristSpot._id} touristSpot={touristSpot} />
+                    ))
                 }
-            </div>
-            <div className="py-8 text-center">
-                <button onClick={() => seelAllData()} className="btn text-white text-xl px-10 bg-red-600 hover:bg-blue-900">
-                    <NavLink to="/alltouristspot">See All Spot</NavLink>
-                </button>
             </div>
         </div>
     );

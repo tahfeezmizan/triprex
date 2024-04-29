@@ -29,6 +29,7 @@ import AboutBanner from './components/About/AboutBanner';
 import About from './components/About/About';
 import Countries from './components/Country/Countries';
 import CountryCategories from './components/Country/CountryCategories';
+import CountriesBanner from './components/Country/CountriesBanner';
 
 const router = createBrowserRouter([
   {
@@ -82,9 +83,9 @@ const router = createBrowserRouter([
       },
       {
         path: '/countrycategories/:id',
-        element: <RotectedRoute><CountryCategories></CountryCategories></RotectedRoute>
+        element: <RotectedRoute><CountriesBanner></CountriesBanner> <CountryCategories></CountryCategories></RotectedRoute>
 
-      },4
+      }, 4
     ]
   },
 ]);

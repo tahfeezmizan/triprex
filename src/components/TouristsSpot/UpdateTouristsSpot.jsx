@@ -23,7 +23,7 @@ const UpdateTouristsSpot = () => {
         const touristsspotname = form.touristsspotname.value;
         const image = form.image.value;
         const location = form.location.value;
-        const averagecost = form.averagecost.value;
+        const averagecost = parseInt(form.averagecost.value);
         const countryname = form.countryname.value;
         const seasonality = form.seasonality.value;
         const totavisitorsperyear = form.totavisitorsperyear.value;
@@ -114,13 +114,13 @@ const UpdateTouristsSpot = () => {
                                 <label className="text-lg font-medium block">Country Name</label>
                                 <select name='countryname' className="select select-bordered w-full"
                                     defaultValue={data.countryname}>
-                                    <option disabled selected>Country Name</option>
-                                    <option>Bangladesh</option>
-                                    <option>Thailand</option>
-                                    <option>Indonesia</option>
-                                    <option>Malaysia</option>
-                                    <option>Vietnam</option>
-                                    <option>Cambodia</option>
+                                    <option disabled >Country Name</option>
+                                    <option selected={data.countryname === 'Bangladesh'}>Bangladesh</option>
+                                    <option selected={data.countryname === 'Thailand'}>Thailand</option>
+                                    <option selected={data.countryname === 'Indonesia'}>Indonesia</option>
+                                    <option selected={data.countryname === 'Malaysia'}>Malaysia</option>
+                                    <option selected={data.countryname === 'Vietnam'}>Vietnam</option>
+                                    <option selected={data.countryname === 'Cambodia'}>Cambodia</option>
                                 </select>
 
                             </div>
@@ -128,13 +128,13 @@ const UpdateTouristsSpot = () => {
                                 <label className="text-lg font-medium block">Seasonality</label>
                                 <select name='seasonality' className="select select-bordered w-full"
                                     defaultValue={data.seasonality}>
-                                    <option disabled selected>Seasonality Name</option>
-                                    <option>Summer</option>
-                                    <option>Rainy</option>
-                                    <option>The Autumn</option>
-                                    <option>Late-autumn</option>
-                                    <option>Winter</option>
-                                    <option>Spring</option>
+                                    <option disabled > Select Seasonality</option>
+                                    <option selected={data.countryname === 'Summer'}>Summer</option>
+                                    <option selected={data.countryname === 'Rainy'}>Rainy</option>
+                                    <option selected={data.countryname === 'The Autumn'}>The Autumn</option>
+                                    <option selected={data.countryname === 'Late-autumn'}>Late-autumn</option>
+                                    <option selected={data.countryname === 'Winter'}>Winter</option>
+                                    <option selected={data.countryname === 'Spring'}>Spring</option>
                                 </select>
                             </div>
                         </div>
@@ -142,17 +142,17 @@ const UpdateTouristsSpot = () => {
                             <div className="flex-1 space-y-2 mb-4">
                                 <label className="text-lg font-medium">Tota Visitors PerYear</label>
                                 <select name='totavisitorsperyear' defaultValue={data.totavisitorsperyear} className="select select-bordered w-full">
-                                    <option disabled selected>Select Visitors PerYear</option>
-                                    <option>Approx 1 Million</option>
-                                    <option>Approx 2 Million</option>
-                                    <option>Approx 3 Million</option>
-                                    <option>Approx 4 Million</option>
-                                    <option>Approx 5 Million</option>
-                                    <option>Over 1 Million</option>
-                                    <option>Over 2 Million</option>
-                                    <option>Over 3 Million</option>
-                                    <option>Over 4 Million</option>
-                                    <option>Over 5 Million</option>
+                                    <option disabled >Select Visitors PerYear</option>
+                                    <option selected={data.countryname === 'Approx 1 Million'}>Approx 1 Million</option>
+                                    <option selected={data.countryname === 'Approx 2 Million'}>Approx 2 Million</option>
+                                    <option selected={data.countryname === 'Approx 3 Million'}>Approx 3 Million</option>
+                                    <option selected={data.countryname === 'Approx 4 Million'}>Approx 4 Million</option>
+                                    <option selected={data.countryname === 'Approx 5 Million'}>Approx 5 Million</option>
+                                    <option selected={data.countryname === 'Over 1 Million'}>Over 1 Million</option>
+                                    <option selected={data.countryname === 'Over 2 Million'}>Over 2 Million</option>
+                                    <option selected={data.countryname === 'Over 3 Million'}>Over 3 Million</option>
+                                    <option selected={data.countryname === 'Over 4 Million'}>Over 4 Million</option>
+                                    <option selected={data.countryname === 'Over 5 Million'}>Over 5 Million</option>
                                 </select>
                             </div>
 
@@ -160,13 +160,13 @@ const UpdateTouristsSpot = () => {
                                 <label className="text-lg font-medium block">Travel Time</label>
                                 <select name='traveltime' className="select select-bordered w-full"
                                     defaultValue={data.traveltime}>
-                                    <option disabled selected>Select 
-                                    Travel Time</option>
-                                    <option>2 Days - 1 NIGHTS</option>
-                                    <option>3 Days - 2  NIGHTS</option>
-                                    <option>7 Days - 6 NIGHTS</option>
-                                    <option>15 Days - 14 NIGHTS</option>
-                                    <option>One Months</option>
+                                    <option disabled >Select
+                                        Travel Time</option>
+                                    <option selected={data.countryname === '2 Days - 1 NIGHTS'}>2 Days - 1 NIGHTS</option>
+                                    <option selected={data.countryname === '3 Days - 2  NIGHTS'}>3 Days - 2  NIGHTS</option>
+                                    <option selected={data.countryname === '7 Days - 6 NIGHTS'}>7 Days - 6 NIGHTS</option>
+                                    <option selected={data.countryname === '15 Days - 14 NIGHTS'}>15 Days - 14 NIGHTS</option>
+                                    <option selected={data.countryname === 'One Months'}>One Months</option>
                                 </select>
 
                             </div>

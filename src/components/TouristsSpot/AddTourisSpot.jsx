@@ -17,7 +17,7 @@ const AddTourisSpot = () => {
         const touristsspotname = form.touristsspotname.value;
         const image = form.image.value;
         const location = form.location.value;
-        const averagecost = form.averagecost.value;
+        const averagecost = parseInt(form.averagecost.value);
         const countryname = form.countryname.value;
         const seasonality = form.seasonality.value;
         const totavisitorsperyear = form.totavisitorsperyear.value;

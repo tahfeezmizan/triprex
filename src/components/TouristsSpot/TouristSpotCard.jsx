@@ -3,7 +3,9 @@ import { CiClock2, CiLocationOn } from 'react-icons/ci';
 import { Link } from 'react-router-dom';
 
 const TouristSpotCard = ({ touristSpot }) => {
-    const { _id, averagecost, countryname, description, image, location, seasonality, totavisitorsperyear, touristsspotname, traveltime } = touristSpot;
+    const { _id, averagecost, countryname, image, location, seasonality, touristsspotname, traveltime } = touristSpot;
+
+
     return (
         <div className="bg-white dark:bg-slate-800 border rounded-xl flex justify-around flex-col hover:shadow-lg duration-500 overflow-hidden">
             <div className="h-64 overflow-hidden">
@@ -23,6 +25,7 @@ const TouristSpotCard = ({ touristSpot }) => {
             </div>
             <div className="p-5 pt-4 pb-7 flex justify-between">
                 <Link to={`/touristSpot/${_id}`} className="btn text-white text-xl bg-[#d01818] hover:bg-[#0d1637]">View Details</Link>
+
                 <p className="text-[#4d4d4d] text-base flex items-center gap-1"><CiClock2 /> <span>{traveltime}</span></p>
             </div>
         </div>
