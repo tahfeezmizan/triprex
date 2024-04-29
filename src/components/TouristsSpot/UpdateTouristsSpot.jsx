@@ -61,10 +61,10 @@ const UpdateTouristsSpot = () => {
             </Helmet>
             <div className="w-full md:w-8/12 mx-auto">
                 <div className="max-w-screen-md mx-auto border rounded-lg bg-white p-12">
-                    <h1 className="text-5xl text-center font-bold pb-5">Update Tourists Spot</h1>
+                    <h1 className="text-2xl md:text-5xl text-center font-bold pb-5">Update Tourists Spot</h1>
 
                     <form onSubmit={handleUpdate}>
-                        <div className="flex gap-8">
+                        <div className="flex flex-col md:flex-row gap-0 md:gap-8">
                             <div className="flex-1 space-y-2 mb-4">
                                 <label className="text-lg font-medium">Tourists Spot Name</label>
                                 <input
@@ -85,7 +85,7 @@ const UpdateTouristsSpot = () => {
                             </div>
                         </div>
 
-                        <div className="flex gap-8">
+                        <div className="flex flex-col md:flex-row gap-0 md:gap-8">
                             <div className="flex-1 space-y-2 mb-4">
                                 <label className="text-lg font-medium">Location</label>
 
@@ -109,7 +109,7 @@ const UpdateTouristsSpot = () => {
 
                         </div>
 
-                        <div className="flex gap-8">
+                        <div className="flex flex-col md:flex-row gap-0 md:gap-8">
                             <div className="flex-1 space-y-2 mb-4">
                                 <label className="text-lg font-medium block">Country Name</label>
                                 <select name='countryname' className="select select-bordered w-full"
@@ -138,7 +138,7 @@ const UpdateTouristsSpot = () => {
                                 </select>
                             </div>
                         </div>
-                        <div className="flex gap-8">
+                        <div className="flex flex-col md:flex-row gap-0 md:gap-8">
                             <div className="flex-1 space-y-2 mb-4">
                                 <label className="text-lg font-medium">Tota Visitors PerYear</label>
                                 <select name='totavisitorsperyear' defaultValue={data.totavisitorsperyear} className="select select-bordered w-full">
@@ -160,7 +160,8 @@ const UpdateTouristsSpot = () => {
                                 <label className="text-lg font-medium block">Travel Time</label>
                                 <select name='traveltime' className="select select-bordered w-full"
                                     defaultValue={data.traveltime}>
-                                    <option disabled selected>Select Travel Time</option>
+                                    <option disabled selected>Select 
+                                    Travel Time</option>
                                     <option>2 Days - 1 NIGHTS</option>
                                     <option>3 Days - 2  NIGHTS</option>
                                     <option>7 Days - 6 NIGHTS</option>
@@ -171,7 +172,7 @@ const UpdateTouristsSpot = () => {
                             </div>
                         </div>
 
-                        <div className=" space-y-2 mb-4">
+                        <div className="space-y-2 mb-4">
                             <label className="text-lg font-medium block">Short Description</label>
                             <textarea
                                 name='description'

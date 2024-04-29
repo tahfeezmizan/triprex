@@ -5,10 +5,9 @@ import twitterSvg from '../../assets/social/Twitter.svg';
 
 const Footer = () => {
     return (
-        <footer className="footer py-28 bg-gray-100 text-base-content">
-            <div className="w-full px-4 md:px-0 md:w-8/12 mx-auto">
-
-                <div className="text-black grid grid-cols-2 xl:grid-cols-12 gap-28">
+        <footer className="footer py-16 xl:py-28 bg-gray-100 text-base-content">
+            <div className="w-full px-4 md:px-0 md:w-8/12 mx-auto text-center xl:text-start">
+                <div className="text-black grid grid-cols-2 lg:grid-cols-4 xl:grid-cols-12 justify-center gap-8 xl:gap-28">
                     {/* Services Links */}
                     <div className="col-span-1 xl:col-span-3 text-center xl:text-start">
                         <nav className="flex flex-col">
@@ -34,7 +33,7 @@ const Footer = () => {
                     </div>
 
                     {/* Legal Links */}
-                    <div className="col-span-2 xl:col-span-2 text-center xl:text-start">
+                    <div className="col-span-1 xl:col-span-2 text-center xl:text-start">
                         <nav className="flex flex-col">
                             <header className="text-black text-lg font-bold mb-4">Contact</header>
 
@@ -44,7 +43,7 @@ const Footer = () => {
                         </nav>
                     </div>
 
-                    <div className="col-span-2 lg:col-span-3">
+                    <div className="col-span-1 xl:col-span-3">
                         <a href="#" className="text-3xl pb-5 text-black font-extrabold cursor-pointer">TripRex</a>
 
                         <div class="flex justify-end items-end gap-4 py-5">

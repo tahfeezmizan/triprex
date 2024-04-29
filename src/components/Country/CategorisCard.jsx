@@ -2,10 +2,11 @@ import React from 'react';
 import { CiClock2, CiLocationOn } from 'react-icons/ci';
 import { Link } from 'react-router-dom';
 
-const TouristSpotCard = ({ touristSpot }) => {
-    const { _id, averagecost, countryname, description, image, location, seasonality, totavisitorsperyear, touristsspotname, traveltime } = touristSpot;
+const CategorisCard = ({ data }) => {
+    const { _id, averagecost, countryname, description, image, location, seasonality, touristsspotname, traveltime } = data;
+
     return (
-        <div className="bg-white dark:bg-slate-800 border rounded-xl flex justify-around flex-col hover:shadow-lg duration-500 overflow-hidden">
+        <div className="bg-white border rounded-xl flex justify-around flex-col hover:shadow-lg duration-500 overflow-hidden">
             <div className="h-64 overflow-hidden">
                 <img className="w-full h-full object-cover transition-transform transform hover:scale-105 duration-500 ease-in-out" src={image} alt="" />
             </div>
@@ -19,7 +20,9 @@ const TouristSpotCard = ({ touristSpot }) => {
                 <div className="flex items-center justify-between gap-3 py-3 pb-4 border-b">
                     <p><span className="bg-gray-100 rounded p-1 text-[#4d4d4d]">{seasonality}</span></p>
                     <p className="text-gray-400 text-base"><span className="text-black">{countryname}</span></p>
+
                 </div>
+                <p className="pt-3">{description}</p>
             </div>
             <div className="p-5 pt-4 pb-7 flex justify-between">
                 <Link to={`/touristSpot/${_id}`} className="btn text-white text-xl bg-[#d01818] hover:bg-[#0d1637]">View Details</Link>
@@ -29,5 +32,4 @@ const TouristSpotCard = ({ touristSpot }) => {
     );
 };
 
-export default TouristSpotCard;
-
+export default CategorisCard;

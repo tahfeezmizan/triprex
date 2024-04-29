@@ -1,6 +1,8 @@
-# My Website
+# My 
 
-Live Site URL: [Your Website URL](https://www.yourwebsite.com)
+TripRex
+
+Live Site URL: https://triprex-de4c0.web.app/
 
 ## Description
 This website is built using React for the frontend, Express for the backend, and MongoDB for the database. It utilizes Tailwind CSS for styling and Firebase Authentication for user authentication.

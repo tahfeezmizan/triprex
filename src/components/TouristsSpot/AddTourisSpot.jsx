@@ -54,19 +54,19 @@ const AddTourisSpot = () => {
             </Helmet>
             <div className="w-full md:w-8/12 mx-auto">
                 <div className="max-w-screen-md mx-auto border rounded-lg bg-white p-12">
-                    <h1 className="text-5xl text-center font-bold pb-5">Add Tourists Spot</h1>
+                    <h1 className="text-2xl md:text-5xl text-center font-bold pb-5">Add Tourists Spot</h1>
 
                     <form onSubmit={handleAddTouris}>
-                        <div className="flex gap-8">
+                        <div className="flex flex-col md:flex-row gap-0 md:gap-8">
                             <div className="flex-1 space-y-2 mb-4">
-                                <label className="text-lg font-medium">Tourists Spot Name</label>
+                                <label className="md:text-lg font-medium">Tourists Spot Name</label>
                                 <input
                                     type="text" name="touristsspotname"
                                     placeholder="Tourists Spot Name"
                                     className="input input-bordered w-full max-w-xs" />
                             </div>
                             <div className="flex-1 space-y-2 mb-4">
-                                <label className="text-lg font-medium">Image</label>
+                                <label className="md:text-lg font-medium">Image</label>
                                 <input
                                     type="text" name="image"
                                     placeholder="Car Brand Name"
@@ -75,9 +75,9 @@ const AddTourisSpot = () => {
                             </div>
                         </div>
 
-                        <div className="flex gap-8">
+                        <div className="flex flex-col md:flex-row gap-0 md:gap-8">
                             <div className="flex-1 space-y-2 mb-4">
-                                <label className="text-lg font-medium">Location</label>
+                                <label className="md:text-lg font-medium">Location</label>
 
                                 <input
                                     type="text" name="location"
@@ -87,7 +87,7 @@ const AddTourisSpot = () => {
                             </div>
 
                             <div className="flex-1 space-y-2 mb-4">
-                                <label className="text-lg font-medium">Average Cost</label>
+                                <label className="md:text-lg font-medium">Average Cost</label>
                                 <input
                                     type="number" name="averagecost"
                                     placeholder="Car Brand Name"
@@ -97,9 +97,9 @@ const AddTourisSpot = () => {
 
                         </div>
 
-                        <div className="flex gap-8">
+                        <div className="flex flex-col md:flex-row gap-0 md:gap-8">
                             <div className="flex-1 space-y-2 mb-4">
-                                <label className="text-lg font-medium block">Country Name</label>
+                                <label className="md:text-lg font-medium block">Country Name</label>
                                 <select name='countryname' className="select select-bordered w-full">
                                     <option disabled selected>Select Country</option>
                                     <option>Bangladesh</option>
@@ -112,7 +112,7 @@ const AddTourisSpot = () => {
 
                             </div>
                             <div className="flex-1 space-y-2 mb-4">
-                                <label className="text-lg font-medium block">Seasonality</label>
+                                <label className="md:text-lg font-medium block">Seasonality</label>
                                 <select name='seasonality' className="select select-bordered w-full">
                                     <option disabled selected>Select Seasonality</option>
                                     <option>Summer</option>
@@ -124,9 +124,9 @@ const AddTourisSpot = () => {
                                 </select>
                             </div>
                         </div>
-                        <div className="flex gap-8">
+                        <div className="flex flex-col md:flex-row gap-0 md:gap-8">
                             <div className="flex-1 space-y-2 mb-4">
-                                <label className="text-lg font-medium">Total Visitors PerYear</label>
+                                <label className="md:text-lg font-medium">Total Visitors PerYear</label>
                                 <select name='totavisitorsperyear' className="select select-bordered w-full">
                                     <option disabled selected>Select Visitors PerYear</option>
                                     <option>Approx 1 Million</option>
@@ -143,7 +143,7 @@ const AddTourisSpot = () => {
                             </div>
 
                             <div className="flex-1 space-y-2 mb-4">
-                                <label className="text-lg font-medium block">Travel Time</label>
+                                <label className="md:text-lg font-medium block">Travel Time</label>
                                 <select name='traveltime' className="select select-bordered w-full">
                                     <option disabled selected>Select Travel Time</option>
                                     <option>2 Days - 1 NIGHTS</option>
@@ -157,7 +157,7 @@ const AddTourisSpot = () => {
                         </div>
 
                         <div className=" space-y-2 mb-4">
-                            <label className="text-lg font-medium block">Short Description</label>
+                            <label className="md:text-lg font-medium block">Short Description</label>
                             <textarea
                                 name='description'
                                 placeholder="Short Description"

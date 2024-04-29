@@ -46,7 +46,7 @@ const AllTouristsSpot = () => {
         <div className="w-full lg:w-5/6 xl:w-8/12 mx-auto px-2 lg:px-0 py-10 md:py-12 lg:py-20">
             <div className="mb-10 flex flex-col md:flex-row justify-between gap-6">
                 <div className="border-l-4 border-l-[#d01818]">
-                    <h2 className="text-3xl md:text-5xl text-gray-800 font-bold pl-2">Popular Activities</h2>
+                    <h2 className="text-3xl md:text-5xl text-gray-800 dark:text-white font-bold pl-2">Popular Activities</h2>
                 </div>
                 <div className="text-end">
                     <div className="dropdown dropdown-end">

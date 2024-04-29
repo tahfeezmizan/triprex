@@ -57,7 +57,6 @@ const MyListedItem = () => {
             <table className="min-w-full divide-y table-auto bg-gray-100 text-center">
                 <thead >
                     <tr className='border p-1'>
-                        <th className='border p-1'></th>
                         <th className='border p-1'>Tourist Spot Name</th>
                         <th className='border p-1'>Country Name</th>
                         <th className='border p-1'>Tourist Location</th>
@@ -71,7 +70,6 @@ const MyListedItem = () => {
                     {
                         spot.map(data => <>
                             <tr key={data._id} className='border p-1 bg-gray-100 hover:bg-gray-200'>
-                                <td className='border p-1'>1</td>
                                 <td className='border p-1 font-medium'>{data.touristsspotname}</td>
                                 <td className='border p-1'>{data.countryname}</td>
                                 <td className='border p-1'>{data.location}</td>

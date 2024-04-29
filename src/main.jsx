@@ -82,12 +82,9 @@ const router = createBrowserRouter([
       },
       {
         path: '/countrycategories/:id',
-        element: <CountryCategories></CountryCategories>
-        
-      },
-      // {
-      //   path: '/countrycategories/:id',
-      // }
+        element: <RotectedRoute><CountryCategories></CountryCategories></RotectedRoute>
+
+      },4
     ]
   },
 ]);

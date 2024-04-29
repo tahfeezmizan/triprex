@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { BASE_URL } from "../../constant";
+import CategorisCard from "./CategorisCard";
 
 const CountryCategories = () => {
     const [country, setCountry] = useState([]);
@@ -31,13 +32,11 @@ const CountryCategories = () => {
     const spotFiltered = spot.filter(data => data.countryname === countryName)
     console.log(spotFiltered)
 
-
     return (
         <div className="w-full lg:w-5/6 xl:w-8/12 mx-auto px-2 lg:px-0 py-10 md:py-12 lg:py-20">
-            <h1>Hello</h1>
             <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10">
                 {
-                    spotFiltered?.map(toursitspot => <li>{toursitspot.touristsspotname}</li>)
+                    spotFiltered?.map(toursitspot => <CategorisCard data={toursitspot} key={toursitspot._id}></CategorisCard>)
                 }
             </div>
 
