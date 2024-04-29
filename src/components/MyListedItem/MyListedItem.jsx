@@ -10,7 +10,6 @@ const MyListedItem = () => {
     const [spot, setSpot] = useState([])
 
     useEffect(() => {
-
         if (user?.email) {
             fetch(`${BASE_URL}/mylist/${user?.email}`)
                 .then(res => res.json())

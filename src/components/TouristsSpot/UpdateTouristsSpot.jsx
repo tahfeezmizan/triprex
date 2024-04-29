@@ -141,18 +141,26 @@ const UpdateTouristsSpot = () => {
                         <div className="flex gap-8">
                             <div className="flex-1 space-y-2 mb-4">
                                 <label className="text-lg font-medium">Tota Visitors PerYear</label>
-                                <input
-                                    type="number" name="totavisitorsperyear"
-                                    placeholder="Car Brand Name"
-                                    className="input input-bordered w-full max-w-xs"
-                                    defaultValue={data.totavisitorsperyear} />
+                                <select name='totavisitorsperyear' defaultValue={data.totavisitorsperyear} className="select select-bordered w-full">
+                                    <option disabled selected>Select Visitors PerYear</option>
+                                    <option>Approx 1 Million</option>
+                                    <option>Approx 2 Million</option>
+                                    <option>Approx 3 Million</option>
+                                    <option>Approx 4 Million</option>
+                                    <option>Approx 5 Million</option>
+                                    <option>Over 1 Million</option>
+                                    <option>Over 2 Million</option>
+                                    <option>Over 3 Million</option>
+                                    <option>Over 4 Million</option>
+                                    <option>Over 5 Million</option>
+                                </select>
                             </div>
 
                             <div className="flex-1 space-y-2 mb-4">
                                 <label className="text-lg font-medium block">Travel Time</label>
                                 <select name='traveltime' className="select select-bordered w-full"
                                     defaultValue={data.traveltime}>
-                                    <option disabled selected>Travel Time</option>
+                                    <option disabled selected>Select Travel Time</option>
                                     <option>2 Days - 1 NIGHTS</option>
                                     <option>3 Days - 2  NIGHTS</option>
                                     <option>7 Days - 6 NIGHTS</option>

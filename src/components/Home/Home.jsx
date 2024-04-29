@@ -3,6 +3,7 @@ import AllTouristsSpot from '../TouristsSpot/AllTouristsSpot';
 import Banner from './Banner';
 import DestinationSlider from '../Destination/DestinationSlider';
 import Newslatter from '../Newslatter/Newslatter';
+import Countries from '../Country/Countries';
 
 const Home = () => {
     return (
@@ -10,6 +11,7 @@ const Home = () => {
             <Banner></Banner>
             <DestinationSlider></DestinationSlider>
             <AllTouristsSpot></AllTouristsSpot>
+            <Countries></Countries>
             <Newslatter></Newslatter>
         </div>
     );

@@ -29,7 +29,7 @@ const Navbar = () => {
         <li><NavLink to='/'>Home</NavLink></li>
         <li><NavLink to='/about'>About</NavLink></li>
         <li><NavLink to='/alltouristspot'>All Tourists Spot</NavLink></li>
-        <li><NavLink to='/country'>Country</NavLink></li>
+        <li><NavLink to='/countrycategories'>Country</NavLink></li>
         {user?.email ?
             <> <li><NavLink to='/addtourisspot'>Add Tourists Spot</NavLink></li>
                 <li><NavLink to='/mylist'>My List</NavLink></li>

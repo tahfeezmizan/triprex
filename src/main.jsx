@@ -28,6 +28,7 @@ import Profile from './components/Profile/Profile';
 import AboutBanner from './components/About/AboutBanner';
 import About from './components/About/About';
 import Countries from './components/Country/Countries';
+import CountryCategories from './components/Country/CountryCategories';
 
 const router = createBrowserRouter([
   {
@@ -80,9 +81,13 @@ const router = createBrowserRouter([
         element: <><AboutBanner></AboutBanner><About></About></>
       },
       {
-        path: '/country',
-        element: <Countries></Countries>
+        path: '/countrycategories/:id',
+        element: <CountryCategories></CountryCategories>
+        
       },
+      // {
+      //   path: '/countrycategories/:id',
+      // }
     ]
   },
 ]);
