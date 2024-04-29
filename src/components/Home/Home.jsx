@@ -4,19 +4,23 @@ import { BASE_URL } from '../../constant';
 import Countries from '../Country/Countries';
 import Newslatter from '../Newslatter/Newslatter';
 import React, { useEffect, useState } from 'react';
+import loader from '../../assets/loader-spineer.json';
 import TouristSpotCard from '../TouristsSpot/TouristSpotCard';
 import { IoIosArrowDown, IoIosArrowUp } from 'react-icons/io';
 import DestinationSlider from '../Destination/DestinationSlider';
+import Lottie from 'lottie-react';
 
 const Home = () => {
     const [spotData, setSpotData] = useState([]);
     const [sort, setSort] = useState("none");
+    const [isLoading, setIsLoading] = useState(true)
 
     useEffect(() => {
         fetch(`${BASE_URL}/touristsspot`)
             .then(res => res.json())
             .then(data => {
-                setSpotData(data)
+                setSpotData(data);
+                setIsLoading(false)
             })
     }, []);
 
@@ -71,13 +75,18 @@ const Home = () => {
                         </div>
                     </div>
                 </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10">
-                    {
-                        spotData.slice(0, 6)?.map(touristSpot => (
-                            <TouristSpotCard key={touristSpot._id} touristSpot={touristSpot} />
-                        ))
-                    }
-                </div>
+                {isLoading ?
+                    <div className="w-full">
+                        <Lottie className="w-[80%]" animationData={loader} loop={true} />
+                    </div> :
+                    <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10">
+                        {
+                            spotData.slice(0, 6)?.map(touristSpot => (
+                                <TouristSpotCard key={touristSpot._id} touristSpot={touristSpot} />
+                            ))
+                        }
+                    </div>
+                }
 
                 <div className="py-8 text-center">
                     <button className="btn text-white text-xl px-10 bg-red-600 hover:bg-blue-900">

@@ -39,10 +39,11 @@ const Banner = () => {
                         backgroundImage: `linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(${slider1})`,
                         backgroundPosition: 'center',
                         backgroundSize: 'cover',
-                        backgroundRepeat: 'no-repeat'
+                        backgroundRepeat: 'no-repeat',
+
                     }}
                 >
-                    <div className="min-h-[500px] md:h-screen flex items-center"  >
+                    <div className="h-full  flex items-center"  >
                         <div className="w-full md:w-8/12 mx-auto text-center">
                             <h4 className='font-bold text-white text-base md:text-xl mb-2'>Experience the Unseen!</h4>
                             <h1 className='text-white text-3xl md:text-6xl xl:text-8xl px-10 xl:px-28 pb-5 md:pb-10  font-bold '>Uncovering Stories, One Trip At A Time</h1>
@@ -59,7 +60,7 @@ const Banner = () => {
                         backgroundRepeat: 'no-repeat'
                     }}
                 >
-                    <div className="min-h-[500px] md:h-screen flex items-center text-white">
+                    <div className="h-full flex items-center text-white">
                         <div className="w-8/12 mx-auto text-center">
                             <h4 className='font-bold text-white text-base md:text-xl mb-2'>Discover New Horizons!</h4>
                             <h1 className='text-white text-3xl md:text-6xl xl:text-8xl  px-10 xl:px-28 b-5 md:pb-10  font-bold '>Explore World And Find The Beauty</h1>
@@ -75,7 +76,7 @@ const Banner = () => {
                         backgroundRepeat: 'no-repeat'
                     }}
                 >
-                    <div className="min-h-[500px] md:h-screen flex items-center text-white">
+                    <div className="h-full flex items-center text-white">
                         <div className="w-8/12 mx-auto text-center">
                             <h4 className='font-bold text-white text-base md:text-xl mb-2'>Explore the World!</h4>
                             <h1 className='text-white text-3xl md:text-6xl xl:text-8xl px-10 xl:px-28 pb-5 md:pb-10  font-bold '>Explore Earth And Like The Supreme</h1>

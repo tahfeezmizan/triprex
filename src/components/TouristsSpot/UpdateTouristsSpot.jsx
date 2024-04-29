@@ -1,12 +1,13 @@
 import { useEffect, useState } from "react";
 import { Helmet } from "react-helmet";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { BASE_URL } from "../../constant";
 import Swal from "sweetalert2";
 
 const UpdateTouristsSpot = () => {
     const [data, setData] = useState([]);
     const { id } = useParams();
+    const navigate = useNavigate()
 
     useEffect(() => {
         fetch(`${BASE_URL}/updatespot/${id}`)
@@ -41,7 +42,6 @@ const UpdateTouristsSpot = () => {
         })
             .then(res => res.json())
             .then(data => {
-                console.log(data);
                 if (data.modifiedCount > 0) {
                     Swal.fire({
                         title: 'success',
@@ -49,8 +49,8 @@ const UpdateTouristsSpot = () => {
                         icon: 'success',
                         confirmButtonText: 'Ok'
                     })
+                    navigate('/mylist')
                 }
-                // setData(data)
             })
     };
 

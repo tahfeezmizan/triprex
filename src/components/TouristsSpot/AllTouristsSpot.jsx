@@ -1,17 +1,21 @@
+import Lottie from "lottie-react";
 import { useEffect, useState } from "react";
-import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 import { BASE_URL } from "../../constant";
 import TouristSpotCard from "./TouristSpotCard";
+import loader from '../../assets/loader-spineer.json';
+import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 
 const AllTouristsSpot = () => {
     const [spotData, setSpotData] = useState([]);
     const [sort, setSort] = useState("none");
+    const [isLoading, setIsLoading] = useState(true)
 
     useEffect(() => {
         fetch(`${BASE_URL}/touristsspot`)
             .then(res => res.json())
             .then(data => {
                 setSpotData(data)
+                setIsLoading(false)
             })
     }, []);
 
@@ -63,13 +67,19 @@ const AllTouristsSpot = () => {
                 </div>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10">
-                {
-                    spotData?.map(touristSpot => (
-                        <TouristSpotCard key={touristSpot._id} touristSpot={touristSpot} />
-                    ))
-                }
-            </div>
+            {isLoading ?
+                <div className="w-full">
+                    <Lottie className="w-[80%]" animationData={loader} loop={true} />
+                </div> :
+
+                <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10">
+                    {
+                        spotData?.map(touristSpot => (
+                            <TouristSpotCard key={touristSpot._id} touristSpot={touristSpot} />
+                        ))
+                    }
+                </div>
+            }
         </div>
     );
 };

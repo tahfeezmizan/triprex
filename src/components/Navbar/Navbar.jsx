@@ -74,7 +74,16 @@ const Navbar = () => {
                         <div className="dropdown dropdown-end" data-tooltip-id="my-tooltip" data-tooltip-content="Hello to you too!">
                             <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
                                 <div className="w-10 rounded-full">
-                                    <img alt="Tailwind CSS Navbar component" src={user.photoURL} />
+                                    <Tooltip anchorSelect=".my-anchor-element" place="top">
+             
+                                        <img 
+                                        // data-tooltip-id="my-tooltip"
+                                        //     data-tooltip-content="Hello world!"
+                                        //     data-tooltip-place="top"
+                                            alt="Tailwind CSS Navbar component" src={user.photoURL} />
+                                    </Tooltip>
+
+
                                 </div>
                             </div>
                             <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-50 p-4 shadow bg-base-100 rounded-box w-52">
