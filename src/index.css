@@ -3,6 +3,6 @@
 @tailwind components;
 @tailwind utilities;
 
-.swiper.swiper-initialized.swiper-horizontal.swiper-backface-hidden.mySwiper {
+.homeBanner {
     height: calc(100vh - 120px);
 }
