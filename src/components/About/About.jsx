@@ -1,5 +1,6 @@
 import aboutImage from '../../assets/HaLongBay.jpg'
 import Newslatter from '../Newslatter/Newslatter';
+import Testimonial from '../Testimonial/Testimonial';
 
 const About = () => {
     return (<>
@@ -33,6 +34,9 @@ const About = () => {
                 </div>
             </div>
         </div>
+
+        <Testimonial></Testimonial>
+
         <Newslatter></Newslatter>
 
     </>

@@ -1,22 +1,19 @@
-import React, { useRef, useState } from 'react';
-// Import Swiper React components
-import { Swiper, SwiperSlide } from 'swiper/react';
-// Import Swiper styles
 import 'swiper/css';
+import React from 'react';
 import 'swiper/css/pagination';
-import { Pagination } from 'swiper/modules';
-
 import bali from '../../assets/bali.jpeg';
-import amptaIsland from '../../assets/Ampat-Islands.webp';
-import SaintMartin from '../../assets/Saint-Martin.jpg';
+import { Pagination } from 'swiper/modules';
 import Bangkok from '../../assets/Bangkok.jpg';
+import { Swiper, SwiperSlide } from 'swiper/react';
 import MekongDelta from '../../assets/mekongdelta.png';
+import SaintMartin from '../../assets/Saint-Martin.jpg';
+import amptaIsland from '../../assets/Ampat-Islands.webp';
 
 const DestinationSlider = () => {
     return (
         <div className="w-full lg:w-5/6 xl:w-8/12 mx-auto px-2 lg:px-0 py-10 md:py-12 lg:py-20">
             <div className="border-l-4 border-l-[#d01818] mb-10">
-                <h2 className="text-3xl md:text-5xl text-[#0d1637] font-bold pl-2">Top Destinations</h2>
+                <h2 className="text-3xl md:text-5xl font-bold pl-2">Top Destinations</h2>
             </div>
 
             <Swiper

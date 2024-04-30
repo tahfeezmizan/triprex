@@ -1,4 +1,5 @@
 import Banner from './Banner';
+import Lottie from 'lottie-react';
 import { Link } from 'react-router-dom';
 import { BASE_URL } from '../../constant';
 import Countries from '../Country/Countries';
@@ -8,7 +9,7 @@ import loader from '../../assets/loader-spineer.json';
 import TouristSpotCard from '../TouristsSpot/TouristSpotCard';
 import { IoIosArrowDown, IoIosArrowUp } from 'react-icons/io';
 import DestinationSlider from '../Destination/DestinationSlider';
-import Lottie from 'lottie-react';
+import Testimonial from '../Testimonial/Testimonial';
 
 const Home = () => {
     const [spotData, setSpotData] = useState([]);
@@ -95,6 +96,7 @@ const Home = () => {
                 </div>
             </div>
             <Countries></Countries>
+            <Testimonial></Testimonial>
             <Newslatter></Newslatter>
         </div>
     );
