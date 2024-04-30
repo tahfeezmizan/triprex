@@ -1,35 +1,32 @@
+import './index.css';
 import React from 'react';
+import Root from './components/Root';
 import ReactDOM from 'react-dom/client';
-import { HelmetProvider } from 'react-helmet-async';
-import {
-  createBrowserRouter,
-  RouterProvider,
-} from "react-router-dom";
-import { ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-import ErrorPage from './components/ErrorPage/ErrorPage';
 import Home from './components/Home/Home';
+import About from './components/About/About';
+import Login from './components/Navbar/Login';
+import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer } from 'react-toastify';
+import Profile from './components/Profile/Profile';
+import { HelmetProvider } from 'react-helmet-async';
+import Register from './components/Navbar/Register';
+import Countries from './components/Country/Countries';
+import ErrorPage from './components/ErrorPage/ErrorPage';
+import AboutBanner from './components/About/AboutBanner';
+import Newslatter from './components/Newslatter/Newslatter';
+import AuthProvider from './components/Provider/AuthProvider';
 import MyCardBanner from './components/MyListedItem/MyCardBanner';
 import MyListedItem from './components/MyListedItem/MyListedItem';
-import Login from './components/Navbar/Login';
-import Register from './components/Navbar/Register';
-import RotectedRoute from './components/PrivateRoute/RotectedRoute';
-import AuthProvider from './components/Provider/AuthProvider';
-import Root from './components/Root';
-import AddTourisSpot from './components/TouristsSpot/AddTourisSpot';
-import AllTouristsSpot from './components/TouristsSpot/AllTouristsSpot';
-import TouristCardDetails from './components/TouristsSpot/TouristCardDetails';
-import UpdateTouristsSpot from './components/TouristsSpot/UpdateTouristsSpot';
-import './index.css';
-import TouristBanner from './components/TouristsSpot/TouristBanner';
-import DestinationSlider from './components/Destination/DestinationSlider';
-import Newslatter from './components/Newslatter/Newslatter';
-import Profile from './components/Profile/Profile';
-import AboutBanner from './components/About/AboutBanner';
-import About from './components/About/About';
-import Countries from './components/Country/Countries';
-import CountryCategories from './components/Country/CountryCategories';
 import CountriesBanner from './components/Country/CountriesBanner';
+import RotectedRoute from './components/PrivateRoute/RotectedRoute';
+import AddTourisSpot from './components/TouristsSpot/AddTourisSpot';
+import TouristBanner from './components/TouristsSpot/TouristBanner';
+import CountryCategories from './components/Country/CountryCategories';
+import AllTouristsSpot from './components/TouristsSpot/AllTouristsSpot';
+import { createBrowserRouter, RouterProvider, } from "react-router-dom";
+import DestinationSlider from './components/Destination/DestinationSlider';
+import UpdateTouristsSpot from './components/TouristsSpot/UpdateTouristsSpot';
+import TouristCardDetails from './components/TouristsSpot/TouristCardDetails';
 
 const router = createBrowserRouter([
   {
@@ -55,7 +52,10 @@ const router = createBrowserRouter([
       },
       {
         path: '/alltouristspot',
-        element: <><TouristBanner></TouristBanner><AllTouristsSpot></AllTouristsSpot><Newslatter></Newslatter></>,
+        element: <><TouristBanner></TouristBanner>
+          <AllTouristsSpot></AllTouristsSpot>
+          <Countries></Countries>
+          <Newslatter></Newslatter></>,
       },
       {
         path: '/addtourisspot',
@@ -63,11 +63,16 @@ const router = createBrowserRouter([
       },
       {
         path: '/mylist',
-        element: <><RotectedRoute><MyCardBanner></MyCardBanner><MyListedItem></MyListedItem></RotectedRoute></>
+        element: <><RotectedRoute>
+          <MyCardBanner></MyCardBanner>
+          <MyListedItem></MyListedItem>
+        </RotectedRoute></>
       },
       {
         path: '/touristSpot/:id',
-        element: <RotectedRoute><TouristCardDetails></TouristCardDetails></RotectedRoute>
+        element: <RotectedRoute>
+          <TouristCardDetails></TouristCardDetails>
+        </RotectedRoute>
       },
       {
         path: '/updatespot/:id',
@@ -83,7 +88,10 @@ const router = createBrowserRouter([
       },
       {
         path: '/countrycategories/:id',
-        element: <RotectedRoute><CountriesBanner></CountriesBanner> <CountryCategories></CountryCategories></RotectedRoute>
+        element: <RotectedRoute>
+          <CountriesBanner></CountriesBanner>
+          <CountryCategories></CountryCategories>
+        </RotectedRoute>
 
       }, 4
     ]

@@ -45,8 +45,8 @@ const Login = () => {
             <Helmet>
                 <title>Login - TripRex</title>
             </Helmet>
-            <div className="card shrink-0 w-full max-w-lg p-10 shadow-2xl bg-base-100">
-                <h1 className="text-5xl text-center font-bold pt-10">Login now!</h1>
+            <div className="card shrink-0 w-full rounded-none max-w-lg p-10 shadow-2xl bg-base-100">
+                <h1 className="text-5xl text-center font-bold pt-4">Login now!</h1>
                 <form onSubmit={handleSubmit(onSubmit)} className="card-body">
                     <div className="form-control">
                         <label className="label">
@@ -127,7 +127,7 @@ const Login = () => {
                         </button>
                     </div>
                 </div>
-                <h3 className="text-[#0d1637] text-center pt-3">Need an account? <NavLink to="/register" className="text-blue-600 hover:text-[#d01818] font-bold">Create Account</NavLink></h3>
+                <h3 className="text-center pt-3">Need an account? <NavLink to="/register" className="text-blue-600 hover:text-[#d01818] font-bold">Create Account</NavLink></h3>
             </div>
         </div>
     );

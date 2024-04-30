@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom';
 const TouristSpotCard = ({ touristSpot }) => {
     const { _id, averagecost, countryname, image, location, seasonality, touristsspotname, traveltime } = touristSpot;
 
-
     return (
         <div className="bg-white dark:bg-slate-800 border rounded-xl flex justify-around flex-col hover:shadow-lg duration-500 overflow-hidden">
             <div className="h-64 overflow-hidden">

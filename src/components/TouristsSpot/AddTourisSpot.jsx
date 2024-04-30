@@ -48,12 +48,12 @@ const AddTourisSpot = () => {
     }
 
     return (
-        <div className="bg-[#f8f8f8] py-10">
+        <div className="py-10">
             <Helmet>
                 <title>Add New Touris Spot - Trip Rex React Template</title>
             </Helmet>
             <div className="w-full md:w-8/12 mx-auto">
-                <div className="max-w-screen-md mx-auto border rounded-lg bg-white p-12">
+                <div className="max-w-screen-md mx-auto border rounded-lg p-12">
                     <h1 className="text-2xl md:text-5xl text-center font-bold pb-5">Add Tourists Spot</h1>
 
                     <form onSubmit={handleAddTouris}>

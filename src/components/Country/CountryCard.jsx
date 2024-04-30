@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
-const CountryCard = ({ countryItem, country }) => {
+const CountryCard = ({ countryItem }) => {
     const { _id, countryName, imageUrl, description } = countryItem;
 
     return (

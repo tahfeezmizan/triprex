@@ -7,9 +7,9 @@ const RotectedRoute = ({ children }) => {
     const location = useLocation()
     console.log(location)
 
-    if (loading) {
-        return <span className="loading loading-spinner text-error"></span>
-    }
+    // if (loading) {
+    //     return <span className="loading loading-spinner text-error"></span>
+    // }
 
     if (user) {
         return children

@@ -17,17 +17,17 @@ const About = () => {
             </div>
         </div>
 
-        <div className="bg-gray-50">
-            <div className="w-full lg:w-5/6 xl:w-8/12 mx-auto px-2 lg:px-0 py-12 lg:py-20">
+        <div className="">
+            <div className="w-full lg:w-5/6 xl:w-8/12 mx-auto px-2 lg:px-0 py-12 lg:py-28">
                 <h1 className="text-2xl md:text-6xl font-semibold text-center px-5 md:px-20 xl:px-44 mb-5">Provide The Best Travel Experience For You</h1>
                 <p className="px-0 lg:px-44 xl:px-72 text-gray-500 text-center text-base mb-10">We understand that every journey has unique needs. Therefore, we offer customized travel packages designed according to your preferences and budget.</p>
 
                 <div className=" flex flex-col md:flex-row gap-10 justify-center">
-                    <div className="flex-1 border bg-[#F1F5FD] p-10 rounded-3xl">
+                    <div className="flex-1 border  p-10 rounded-3xl">
                         <h2 className="text-3xl font-semibold mb-4">Our Vision</h2>
                         <p className="font-medium">Our vision is to become a leading travel agency company that provides high-quality services and inspiration for our customer.</p>
                     </div>
-                    <div className="flex-1 border bg-[#F1F5FD] p-10 rounded-3xl">
+                    <div className="flex-1 border  p-10 rounded-3xl">
                         <h2 className="text-3xl font-semibold mb-4">Our Mission</h2>
                         <p className="font-medium">Our Mission is to become a leading travel agency company that provides high-quality services and inspiration for our customer.</p>
                     </div>

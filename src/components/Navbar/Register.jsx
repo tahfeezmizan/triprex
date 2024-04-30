@@ -42,12 +42,12 @@ const Register = () => {
     };
 
     return (
-        <div className="hero min-h-screen bg-[#f8f8f8]" >
+        <div className="glass hero min-h-screen bg-base-200" >
             <Helmet>
                 <title>Register Page - Trip Rex React Template</title>
             </Helmet>
-            <div className="card shrink-0 w-full max-w-lg p-10 shadow-2xl bg-base-100">
-                <h1 className="text-5xl text-center font-bold pt-10">Register Now!</h1>
+            <div className="card shrink-0 w-full rounded-none max-w-lg p-10 shadow-2xl bg-base-100">
+                <h1 className="text-5xl text-center font-bold">Register Now!</h1>
                 <form onSubmit={handleSubmit(onSubmit)} className="card-body">
                     <div className="form-control">
                         <label className="label">
@@ -127,7 +127,7 @@ const Register = () => {
                         <button type="submit" className="btn bg-[#d01818] hover:bg-[#0d1637] text-white text-xl font-bold">Create An Account</button>
                     </div>
                 </form>
-                <h3 className="text-black text-center -mt-7">Have an account? <NavLink to="/login" className="text-blue-600 hover:text-[#d01818] font-bold ">Sing In</NavLink></h3>
+                <h3 className="text-center -mt-7">Have an account? <NavLink to="/login" className="text-blue-600 hover:text-[#d01818] font-bold ">Sing In</NavLink></h3>
             </div>
         </div>
     );

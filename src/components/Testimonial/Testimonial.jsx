@@ -8,7 +8,7 @@ const Testimonial = () => {
     return (
         <div className="w-full lg:w-5/6 xl:w-8/12 mx-auto px-2 lg:px-0 py-10 md:py-12 lg:py-20">
             <div className="border-l-4 border-l-[#d01818] mb-10">
-                <h2 className="text-3xl md:text-5xl text-[#0d1637] font-bold pl-2">What our clients say</h2>
+                <h2 className="text-3xl md:text-5xl font-bold pl-2">What our clients say</h2>
             </div>
 
             <Swiper
