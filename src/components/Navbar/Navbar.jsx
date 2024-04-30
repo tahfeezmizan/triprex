@@ -23,13 +23,11 @@ const Navbar = () => {
             setTheme('light')
         }
     }
-    console.log(theme)
 
     const links = <>
         <li><NavLink to='/'>Home</NavLink></li>
         <li><NavLink to='/about'>About</NavLink></li>
         <li><NavLink to='/alltouristspot'>All Tourists Spot</NavLink></li>
-        {/* <li><NavLink to='/countrycategories'>Country</NavLink></li> */}
         {user?.email ?
             <> <li><NavLink to='/addtourisspot'>Add Tourists Spot</NavLink></li>
                 <li><NavLink to='/mylist'>My List</NavLink></li>
@@ -75,7 +73,7 @@ const Navbar = () => {
                         </label>
                     </div>
 
-                    {user?.email ?
+                    {user ?
                         <div className="dropdown dropdown-end" data-tooltip-id="my-tooltip" data-tooltip-content="Hello to you too!">
                             <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
                                 <div className="w-10 rounded-full">
@@ -83,7 +81,7 @@ const Navbar = () => {
                                     </Tooltip> */}
                                     <img
                                         data-tooltip-id="my-tooltip"
-                                        data-tooltip-content={user?.displayName.toUpperCase()}
+                                        data-tooltip-content={user?.displayName?.toUpperCase()}
                                         alt="Tailwind CSS Navbar component" src={user.photoURL} />
                                     <Tooltip id="my-tooltip" place='right' />
                                 </div>

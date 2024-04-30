@@ -1,17 +1,18 @@
 import { useState } from "react";
 import { Helmet } from "react-helmet";
 import { useForm } from "react-hook-form";
-import { FaRegEye, FaRegEyeSlash } from "react-icons/fa";
+import { FaGithub, FaRegEye, FaRegEyeSlash } from "react-icons/fa";
 import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import UseAuth from "../../Hook/UseAuth";
 import { toast } from "react-toastify";
+import { FcGoogle } from "react-icons/fc";
+import { FaXTwitter } from "react-icons/fa6";
 
 const Login = () => {
-    const { logInUser, googleLogin, githubLogin } = UseAuth();
+    const { logInUser, googleLogin, githubLogin, twitterLogin } = UseAuth();
     const [showPassword, setShowPassword] = useState(false);
     const navigate = useNavigate()
     const location = useLocation();
-    console.log('Login Location', location)
 
     const {
         register,
@@ -96,7 +97,7 @@ const Login = () => {
                         <button
                             onClick={() => googleLogin()
                                 .then(result => {
-                                    toast.success('Congrs! Login Sucessfull');
+                                    toast.success('Congrs! Google Login Sucessfull');
                                     navigate(location?.state ? location.state : '/');
                                 })
                                 .catch((error) => {
@@ -106,14 +107,14 @@ const Login = () => {
                                     toast.error(errorMessage)
                                 })
                             }
-                            className='btn mr-3'>Google
+                            className='btn mr-3 text-2xl bg-transparent outline-none hover:bg-transparent '><FcGoogle />
 
                         </button>
 
                         <button
                             onClick={() => githubLogin()
                                 .then(result => {
-                                    toast.success('Congrs! Login Sucessfull');
+                                    toast.success('Congrs! Github Login Sucessfull');
                                     navigate(location?.state ? location.state : '/');
                                 })
                                 .catch((error) => {
@@ -123,7 +124,23 @@ const Login = () => {
                                     toast.error(errorMessage)
                                 })
                             }
-                            className='btn ml-3'>GitHub
+                            className='btn ml-3 text-2xl bg-transparent outline-none hover:bg-transparent '><FaGithub />
+                        </button>
+
+                        <button
+                            onClick={() => twitterLogin()
+                                .then(result => {
+                                    toast.success('Congrs! Twitter Login Sucessfull');
+                                    navigate(location?.state ? location.state : '/');
+                                })
+                                .catch((error) => {
+                                    const errorText = error.message;
+                                    console.log(errorText)
+                                    const errorMessage = errorText.slice(22, 62);
+                                    toast.error(errorMessage)
+                                })
+                            }
+                            className='btn ml-3 text-2xl bg-transparent outline-none hover:bg-transparent '><FaXTwitter />
                         </button>
                     </div>
                 </div>

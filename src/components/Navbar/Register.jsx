@@ -2,15 +2,14 @@ import { useState } from "react";
 import { Helmet } from "react-helmet";
 import { useForm } from "react-hook-form";
 import { FaRegEye, FaRegEyeSlash } from "react-icons/fa";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import UseAuth from "../../Hook/UseAuth";
 import { toast } from "react-toastify";
 
 const Register = () => {
-    const { createUser } = UseAuth();
-
+    const { createUser, userProfileUpdate, logOut } = UseAuth();
     const [showPassword, setShowPassword] = useState(false);
-    // const navigate = useNavigate();
+    const navigate = useNavigate();
 
     const {
         register,
@@ -25,11 +24,10 @@ const Register = () => {
         createUser(email, password)
             .then(result => {
                 const registerData = result.user;
-                console.log(registerData)
-                // userProfileUpdate(name, photoUrl)
-                // logOut()
+                userProfileUpdate(name, photoUrl)
+                logOut()
                 toast.success('User Register Sucessfully')
-                // navigate('/login')
+                navigate('/login')
             })
             .catch(error => {
                 const errorMessage = error.message;
@@ -85,7 +83,7 @@ const Register = () => {
                             name="photourl"
                             placeholder="Photo URL"
                             className="input input-bordered"
-                            {...register("photoUrl")}
+                            {...register("photourl")}
                         />
                         {/* {errors.photourl && toast.success('Photo Url')} */}
                         {errors.photourl && <span className="text-xs text-red-500"></span>}
