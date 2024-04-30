@@ -26,11 +26,10 @@ const Register = () => {
                 const registerData = result?.user;
                 userProfileUpdate(name, photoURL)
                 .then(() => {
-
+                    logOut()
+                    toast.success('User Register Sucessfully')
+                    navigate('/login')
                 })
-                logOut()
-                toast.success('User Register Sucessfully')
-                navigate('/login')
             })
             .catch(error => {
                 const errorMessage = error.message;
