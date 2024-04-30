@@ -140,7 +140,7 @@ const Login = () => {
                                     toast.error(errorMessage)
                                 })
                             }
-                            className='btn ml-3 text-2xl bg-transparent outline-none hover:bg-transparent '><FaXTwitter />
+                            className='btn ml-3 text-xl bg-transparent outline-none hover:bg-transparent '><FaXTwitter />
                         </button>
                     </div>
                 </div>

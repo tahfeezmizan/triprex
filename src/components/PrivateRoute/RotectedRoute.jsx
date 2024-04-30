@@ -1,14 +1,17 @@
 import React from 'react';
 import UseAuth from '../../Hook/UseAuth';
-import { Navigate, useLocation } from 'react-router-dom';
+import { Navigate, useLocation, useNavigate } from 'react-router-dom';
 
 const RotectedRoute = ({ children }) => {
     const { user, loading } = UseAuth();
     const location = useLocation()
-    console.log(location)
+    const navigate = useNavigate()
+
+    // console.log(location);
+    // console.log(navigate);
 
     // if (loading) {
-    //     return <span className="loading loading-spinner text-error"></span>
+    //     return <span className="loading loading-spinner text-error text-5xl"></span>
     // }
 
     if (user) {

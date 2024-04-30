@@ -15,7 +15,6 @@ const TouristCardDetails = () => {
         fetch(`${BASE_URL}/touristSpotDetails/${id}`)
             .then(res => res.json())
             .then(data => {
-                console.log(data)
                 setCard(data)
             })
     }, [id]);

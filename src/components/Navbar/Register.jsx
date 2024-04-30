@@ -18,13 +18,16 @@ const Register = () => {
     } = useForm();
 
     const onSubmit = (data) => {
-        const { email, password, name, photoUrl } = data;
+        const { email, password, name, photoURL } = data;
         console.log(data)
 
         createUser(email, password)
             .then(result => {
-                const registerData = result.user;
-                userProfileUpdate(name, photoUrl)
+                const registerData = result?.user;
+                userProfileUpdate(name, photoURL)
+                .then(() => {
+
+                })
                 logOut()
                 toast.success('User Register Sucessfully')
                 navigate('/login')
@@ -80,13 +83,13 @@ const Register = () => {
                         </label>
                         <input
                             type="text"
-                            name="photourl"
+                            name="photoURL"
                             placeholder="Photo URL"
                             className="input input-bordered"
-                            {...register("photourl")}
+                            {...register("photoURL")}
                         />
-                        {/* {errors.photourl && toast.success('Photo Url')} */}
-                        {errors.photourl && <span className="text-xs text-red-500"></span>}
+                        {/* {errors.photoURL && toast.success('Photo Url')} */}
+                        {errors.photoURL && <span className="text-xs text-red-500"></span>}
                     </div>
                     <div className="form-control">
                         <label className="label">

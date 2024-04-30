@@ -14,6 +14,8 @@ const AuthProvider = ({ children }) => {
     const [user, setUser] = useState(null);
     const [loading, setLoading] = useState(true);
 
+    console.log('auth Loading', loading);
+
     const createUser = (email, password) => {
         setLoading(true)
         return createUserWithEmailAndPassword(auth, email, password)
@@ -43,9 +45,10 @@ const AuthProvider = ({ children }) => {
     }
 
     // update user 
-    const userProfileUpdate = (name, imgUrl) => {
+    const userProfileUpdate = (name, photoURL) => {
         return updateProfile(auth.currentUser, {
-            displayName: name, photoURL: imgUrl
+            displayName: name,
+            photoURL: photoURL
         })
     }
 
@@ -63,9 +66,7 @@ const AuthProvider = ({ children }) => {
                 console.log(currentUser)
             }
         });
-        return () => {
-            unsubscribe()
-        }
+        return () => unsubscribe()
     }, [])
 
     const authValue = {
