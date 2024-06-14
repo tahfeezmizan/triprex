@@ -1,6 +1,5 @@
-# My 
+# My TripRex 
 
-TripRex 
 TripRex is the ultimate online platform for next-generation traveling!
 
 Live Site URL: https://triprex-de4c0.web.app
