@@ -1,0 +1,17 @@
+li , .logout {
+    font-size: 16px;
+    font-weight: 500;
+    transition: 0.3 ease-in;
+}
+
+li a.active {
+    background: transparent !important;
+    color: #000000 !important;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+li a:hover, .logout:hover {
+    color: #d01818 !important;
+    background: transparent !important;
+}
