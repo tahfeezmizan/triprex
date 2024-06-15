@@ -65,6 +65,13 @@ async function run() {
             res.send(result)
         })
 
+        // sorting method
+        app.get('/touristsspot/sorted', async (req, res) => {
+            const cursor = BDcollection.find().sort({ averagecost: 1 });
+            const result = await cursor.toArray();
+            res.send(result);
+        })
+
 
 
         // Send a ping to confirm a successful connection
