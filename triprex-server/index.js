@@ -34,6 +34,14 @@ async function run() {
             res.send(result)
         })
 
+
+        // Get Tourists Spot All Data
+        app.get('/touristsspot', async (req, res) => {
+            const cursor = BDcollection.find();
+            const result = await cursor.toArray();
+            res.send(result)
+        })
+
         // Send a ping to confirm a successful connection
         // await client.db("admin").command({ ping: 1 });
         console.log("Pinged your deployment. You successfully connected to MongoDB!");
