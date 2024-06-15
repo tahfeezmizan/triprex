@@ -79,6 +79,28 @@ async function run() {
             res.send(result)
         })
 
+         // Update Tourists Spot
+         app.put('/updateTouristsSpot/:id', async (req, res) => {
+            const id = req.params.id;
+            const item = req.body;
+            const query = { _id: new ObjectId(id) };
+            const data = {
+                $set: {
+                    touristsspotname: item.touristsspotname,
+                    image: item.image,
+                    location: item.location,
+                    averagecost: item.averagecost,
+                    countryname: item.countryname,
+                    seasonality: item.seasonality,
+                    totavisitorsperyear: item.totavisitorsperyear,
+                    traveltime: item.traveltime,
+                    description: item.description,
+                }
+            };
+            const result = await BDcollection.updateOne(query, data)
+            res.send(result)
+        })
+
 
 
         // Send a ping to confirm a successful connection
