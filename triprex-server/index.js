@@ -58,6 +58,15 @@ async function run() {
         })
 
 
+         // Find Update Tourists Spot Using Id
+         app.get('/updatespot/:id', async (req, res) => {
+            const id = req.params.id;
+            const result = await BDcollection.findOne({ _id: new ObjectId(id) });
+            res.send(result)
+        })
+
+
+
         // Send a ping to confirm a successful connection
         // await client.db("admin").command({ ping: 1 });
         console.log("Pinged your deployment. You successfully connected to MongoDB!");
