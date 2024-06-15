@@ -72,6 +72,13 @@ async function run() {
             res.send(result);
         })
 
+         // Get tourists spot data 
+         app.post('/touristsspot', async (req, res) => {
+            const newSpot = req.body;
+            const result = await BDcollection.insertOne(newSpot);
+            res.send(result)
+        })
+
 
 
         // Send a ping to confirm a successful connection
