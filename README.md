@@ -1,7 +1,8 @@
 # TripRex 🌏✈️
 
-## Project Overview
 This project aims to provide users with a comprehensive platform to explore detailed information about various tourist spots across Southeast Asia. It addresses the challenge of fragmented travel information by centralizing data and providing an intuitive interface for seamless navigation and discovery.
+
+Live Link: https://lnkd.in/gixN8ukf
 
 ## Features
 - **Contribute:** Users can contribute by adding new tourist spots, enriching the community's travel experience with their favorite destinations.
