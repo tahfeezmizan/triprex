@@ -93,7 +93,7 @@ const Home = () => {
                     </div>
                 }
 
-                <div className="py-8 text-center">
+                <div className="pt-8 text-center">
                     <button className="btn text-white text-xl px-10 bg-red-600 hover:bg-blue-900"
                     data-tooltip-id="my-tooltip"
                     data-tooltip-content="See All Tourist Spot">

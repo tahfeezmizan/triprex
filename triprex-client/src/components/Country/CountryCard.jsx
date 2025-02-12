@@ -6,7 +6,7 @@ const CountryCard = ({ countryItem }) => {
 
     return (
         <NavLink to={`/countrycategories/${_id}`}>
-            <div className="rounded-lg bg-white overflow-hidden hover:shadow-xl duration-500">
+            <div className="rounded-lg bg-white border overflow-hidden hover:shadow-xl duration-500">
                 <div className="h-64 overflow-hidden" >
                     <img className="w-full h-full object-cover cursor-pointer" src={imageUrl} alt="" />
                 </div>
